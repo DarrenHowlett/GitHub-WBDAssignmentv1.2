@@ -1,3 +1,93 @@
+<?php
+
+	// Sessions/Cookies
+	session_start();
+	if ($_SESSION['loggedIn'] == TRUE) {
+		?>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="lead">You Are Already Logged In.</p>
+				</div>
+			</div>
+		</div>
+		<?php
+	} else {
+		?>
+		<!-- Page Content -->
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- col-lg-12 -->
+				<div class="col-lg-12">
+					<h1>Registration Form</h1>
+					<p class="lead">Please fill in all <span class="required">* required fields</span> in the registration form.</p>
+					<p>By filling in this form and registering on this web site you agree to all the terms and conditions associated with this web site.</p>
+					<!-- form -->
+					<form action="registerResults.php" method="post">
+						<fieldset>
+							<label for="title">Title<span class="required">*</span><br>
+								<select id="title" name="title">
+									<option value="Mr">Mr</option>
+									<option value="Miss">Miss</option>
+									<option value="Ms">Ms</option>
+									<option value="Mrs">Mrs</option>
+									<option value="Doctor">Doctor</option>
+									<option value="Reverend">Reverend</option>
+								</select>
+							</label><br>
+							<label for="forename">Forename<span class="required">*</span><br>
+								<input id="forename" name="forename" type="text" required="required">
+							</label><br>
+							<label for="surname">Surname<span class="required">*</span><br>
+								<input id="surname" name="surname" type="text" required="required">
+							</label><br>
+							<label for="firstLineAddress">1st Line Address<span class="required">*</span><br>
+								<input id="firstLineAddress" name="firstLineAddress" type="text" required="required">
+							</label><br>
+							<label for="secondLineAddress">2nd Line Address<br>
+								<input id="secondLineAddress" name="secondLineAddress" type="text">
+							</label><br>
+							<label for="town">Town<span class="required">*</span><br>
+								<input id="town" name="town" type="text" required="required">
+							</label><br>
+							<label for="county">County<span class="required">*</span><br>
+								<input id="county" name="county" type="text" required="required">
+							</label><br>
+							<label for="postcode">Postcode<span class="required">*</span><br>
+								<input id="postcode" name="postcode" type="text" required="required">
+							</label><br>
+							<label for="phone">Phone<span class="required">*</span><br>
+								<input id="phone" name="phone" type="tel" required="required">
+							</label><br>
+							<label for="email">Email<span class="required">*</span><br>
+								<input id="email" name="email" type="email" required="required" autocomplete="off">
+							</label><br>
+							<label for="emailConfirm">Confirm Email<span class="required">*</span><br>
+								<input id="emailConfirm" name="emailConfirm" type="email" required="required" autocomplete="off">
+							</label><br>
+							<label for="pwrd">Password<span class="required">*</span><br>
+								<input id="pwrd" name="pwrd" type="password" required="required" autocomplete="off">
+							</label><br>
+							<label for="pwrdConfirm">Confirm Password<span class="required">*</span><br>
+								<input id="pwrdConfirm" name="pwrdConfirm" type="password" required="required" autocomplete="off">
+							</label><br>
+							<input id="submit" name="submit" type="submit">
+						</fieldset>
+					</form>
+					<!-- /. form -->
+				</div>
+				<!-- /. col-lg-12 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+		<?php
+	}
+	// /. Sessions/Cookies
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,76 +168,6 @@
 	<!-- /.container -->
 </nav>
 <!-- /.nav -->
-
-<!-- Page Content -->
-<div class="container">
-
-	<div class="row">
-
-		<div class="col-lg-12">
-
-			<h1>Registration Form</h1>
-			<p class="lead">Please fill in all <span class="required">* required fields</span> in the registration form.</p>
-			<p>By filling in this form and registering on this web site you agree to all the terms and conditions associated with this web site.</p>
-			<form action="registerResults.php" method="post">
-				<fieldset>
-					<label for="title">Title<span class="required">*</span><br>
-						<select id="title" name="title">
-							<option value="Mr">Mr</option>
-							<option value="Miss">Miss</option>
-							<option value="Ms">Ms</option>
-							<option value="Mrs">Mrs</option>
-							<option value="Doctor">Doctor</option>
-							<option value="Reverend">Reverend</option>
-						</select>
-					</label><br>
-					<label for="forename">Forename<span class="required">*</span><br>
-						<input id="forename" name="forename" type="text" required="required">
-					</label><br>
-					<label for="surname">Surname<span class="required">*</span><br>
-						<input id="surname" name="surname" type="text" required="required">
-					</label><br>
-					<label for="firstLineAddress">1st Line Address<span class="required">*</span><br>
-						<input id="firstLineAddress" name="firstLineAddress" type="text" required="required">
-					</label><br>
-					<label for="secondLineAddress">2nd Line Address<br>
-						<input id="secondLineAddress" name="secondLineAddress" type="text">
-					</label><br>
-					<label for="town">Town<span class="required">*</span><br>
-						<input id="town" name="town" type="text" required="required">
-					</label><br>
-					<label for="county">County<span class="required">*</span><br>
-						<input id="county" name="county" type="text" required="required">
-					</label><br>
-					<label for="postcode">Postcode<span class="required">*</span><br>
-						<input id="postcode" name="postcode" type="text" required="required">
-					</label><br>
-					<label for="phone">Phone<span class="required">*</span><br>
-						<input id="phone" name="phone" type="tel" required="required">
-					</label><br>
-					<label for="email">Email<span class="required">*</span><br>
-						<input id="email" name="email" type="email" required="required" autocomplete="off">
-					</label><br>
-					<label for="emailConfirm">Confirm Email<span class="required">*</span><br>
-						<input id="emailConfirm" name="emailConfirm" type="email" required="required" autocomplete="off">
-					</label><br>
-					<label for="pwrd">Password<span class="required">*</span><br>
-						<input id="pwrd" name="pwrd" type="password" required="required" autocomplete="off">
-					</label><br>
-					<label for="pwrdConfirm">Confirm Password<span class="required">*</span><br>
-						<input id="pwrdConfirm" name="pwrdConfirm" type="password" required="required" autocomplete="off">
-					</label><br>
-					<input id="submit" name="submit" type="submit">
-				</fieldset>
-			</form>
-
-		</div>
-
-	</div>
-	<!-- /.row -->
-
-</div>
-<!-- /.container -->
 
 <div class="container">
 

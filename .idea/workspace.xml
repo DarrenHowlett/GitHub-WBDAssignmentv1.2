@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f80d02f-bb2c-4cfe-8d1e-5e977c7f6671" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/general/contact.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/login/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/login/loginResults.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/login/logout.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/profile/profile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/register/register.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/register/registerResults.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/profile/deleteProfile/deleteProfile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/profile/updateEmail/updateEmail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/profile/updateEmail/updateEmailConfirmation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/profile/updateEmail/updateEmailResults.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/profile/updateProfile/updateProfile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrd.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrdConfirmation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrdResults.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login/login.php" afterPath="$PROJECT_DIR$/pages/login/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/profile/profile.php" afterPath="$PROJECT_DIR$/pages/profile/profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/register/register.php" afterPath="$PROJECT_DIR$/pages/register/register.php" />
     </list>
     <ignored path="GitHub-WBDAssignmentv1.2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,44 +34,80 @@
     <favorites_list name="GitHub-WBDAssignmentv1.2" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="loginResults.php" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="loginResults.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/login/loginResults.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6862745">
-              <caret line="178" column="60" selection-start-line="178" selection-start-column="60" selection-end-line="178" selection-end-column="60" />
+            <state vertical-scroll-proportion="-23.571428">
+              <caret line="178" column="63" selection-start-line="178" selection-start-column="63" selection-end-line="178" selection-end-column="63" />
               <folding>
-                <marker date="1453352420000" expanded="true" signature="3057:3122" placeholder="SELECT `emai... user" />
-                <marker date="1453352420000" expanded="true" signature="4627:4695" placeholder="SELECT `pass... user" />
-                <marker date="1453352420000" expanded="true" signature="6813:6872" placeholder="SELECT * FRO... user" />
-                <marker date="1453352420000" expanded="true" signature="8090:8866" placeholder="..." />
-                <marker date="1453352420000" expanded="true" signature="8097:8866" placeholder="..." />
-                <marker date="1453352420000" expanded="true" signature="8579:8749" placeholder="..." />
-                <marker date="1453352420000" expanded="true" signature="8588:8740" placeholder="{...}" />
+                <marker date="1453392999000" expanded="true" signature="3057:3122" placeholder="SELECT `emai... user" />
+                <marker date="1453392999000" expanded="true" signature="4627:4695" placeholder="SELECT `pass... user" />
+                <marker date="1453392999000" expanded="true" signature="6813:6872" placeholder="SELECT * FRO... user" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/login/login.php">
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/profile/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.857142">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-              <folding />
+            <state vertical-scroll-proportion="8.571428">
+              <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+              <folding>
+                <marker date="1453391702000" expanded="true" signature="1074:1129" placeholder="SELECT `id` user" />
+                <marker date="1453391702000" expanded="true" signature="1074:1152" placeholder="SELECT `id` user" />
+                <marker date="1453391702000" expanded="true" signature="4176:4193" placeholder="..." />
+                <marker date="1453391702000" expanded="true" signature="4996:5020" placeholder="..." />
+                <marker date="1453391702000" expanded="true" signature="5242:5275" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registerResults.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/register/registerResults.php">
+      <file leaf-file-name="updatePwrd.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="34.285713">
-              <caret line="126" column="77" selection-start-line="126" selection-start-column="77" selection-end-line="126" selection-end-column="77" />
+            <state vertical-scroll-proportion="-6.428571">
+              <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
               <folding>
-                <marker date="1453352135000" expanded="true" signature="5773:5827" placeholder="SELECT `emai... user" />
-                <marker date="1453352135000" expanded="true" signature="5773:5838" placeholder="SELECT `emai... user" />
-                <marker date="1453352135000" expanded="true" signature="6905:7249" placeholder="INSERT INTO `user`... " />
+                <marker date="1453397665000" expanded="true" signature="693:743" placeholder="SELECT `user... user" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updatePwrdConfirmation.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrdConfirmation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1764706">
+              <caret line="112" column="52" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
+              <folding>
+                <marker date="1453397857000" expanded="true" signature="3668:3736" placeholder="SELECT `emai... user" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateEmail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/profile/updateEmail/updateEmail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.428572">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="18" />
+              <folding>
+                <marker date="1453394807000" expanded="true" signature="693:768" placeholder="SELECT `id`,... user" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updatePwrdResults.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrdResults.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1453396446000" expanded="true" signature="728:789" placeholder="UPDATE `user... " />
               </folding>
             </state>
           </provider>
@@ -86,15 +125,22 @@
         <option value="$PROJECT_DIR$/admin/config/staffMember.php" />
         <option value="$PROJECT_DIR$/admin/config/management.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/pages/register/register.php" />
         <option value="$PROJECT_DIR$/pages/general/contact.php" />
         <option value="$PROJECT_DIR$/admin/config/normalUser.php" />
         <option value="$PROJECT_DIR$/pages/update/profile/profile.php" />
-        <option value="$PROJECT_DIR$/pages/profile/profile.php" />
         <option value="$PROJECT_DIR$/pages/login/logout.php" />
-        <option value="$PROJECT_DIR$/pages/login/login.php" />
         <option value="$PROJECT_DIR$/pages/register/registerResults.php" />
+        <option value="$PROJECT_DIR$/pages/login/login.php" />
+        <option value="$PROJECT_DIR$/pages/profile/profile.php" />
+        <option value="$PROJECT_DIR$/pages/register/register.php" />
+        <option value="$PROJECT_DIR$/pages/profile/updateProfile/updateProfile.php" />
+        <option value="$PROJECT_DIR$/pages/profile/deleteProfile/deleteProfile.php" />
         <option value="$PROJECT_DIR$/pages/login/loginResults.php" />
+        <option value="$PROJECT_DIR$/pages/profile/updateEmail/updateEmail.php" />
+        <option value="$PROJECT_DIR$/pages/profile/updateEmail/updateEmailConfirmation.php" />
+        <option value="$PROJECT_DIR$/pages/profile/updateEmail/updateEmailResults.php" />
+        <option value="$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrd.php" />
+        <option value="$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrdConfirmation.php" />
       </list>
     </option>
   </component>
@@ -113,7 +159,7 @@
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="false" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="2" id="Add" />
@@ -134,7 +180,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -186,6 +232,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="profile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="updatePwrd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="updateEmail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -273,17 +363,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GitHub-Recycling4U" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages/profile/updatePwrd" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/profile/updatePwrd" />
+      <recent name="$PROJECT_DIR$/pages/profile/updateEmail" />
       <recent name="$PROJECT_DIR$/pages/login" />
       <recent name="$PROJECT_DIR$/pages/profile" />
       <recent name="$PROJECT_DIR$/admin/config" />
@@ -327,6 +419,13 @@
       <option name="number" value="Default" />
       <updated>1453340373002</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added More Functionality To Pages">
+      <created>1453352579477</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1453352579477</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -334,32 +433,117 @@
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1515625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added More Functionality To Pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added More Functionality To Pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pages/login/loginResults.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="188" column="33" selection-start-line="188" selection-start-column="33" selection-end-line="188" selection-end-column="33" />
+          <folding>
+            <marker date="1453392999000" expanded="true" signature="3057:3122" placeholder="SELECT `emai... user" />
+            <marker date="1453392999000" expanded="true" signature="4627:4695" placeholder="SELECT `pass... user" />
+            <marker date="1453392999000" expanded="true" signature="6813:6872" placeholder="SELECT * FRO... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding>
+            <marker date="1453391702000" expanded="true" signature="1074:1129" placeholder="SELECT `id` user" />
+            <marker date="1453391702000" expanded="true" signature="1074:1152" placeholder="SELECT `id` user" />
+            <marker date="1453391702000" expanded="true" signature="4176:4193" placeholder="..." />
+            <marker date="1453391702000" expanded="true" signature="4996:5020" placeholder="..." />
+            <marker date="1453391702000" expanded="true" signature="5242:5275" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/register/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="26" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="12" selection-start-line="5" selection-start-column="4" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/updateEmail/updateEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="165" column="20" selection-start-line="165" selection-start-column="20" selection-end-line="165" selection-end-column="20" />
+          <folding>
+            <marker date="1453394807000" expanded="true" signature="693:768" placeholder="SELECT `id`,... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/updateProfile/updateProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/deleteProfile/deleteProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/register/registerResults.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="126" column="77" selection-start-line="126" selection-start-column="77" selection-end-line="126" selection-end-column="77" />
+          <folding>
+            <marker date="1453352135000" expanded="true" signature="5773:5827" placeholder="SELECT `emai... user" />
+            <marker date="1453352135000" expanded="true" signature="5773:5838" placeholder="SELECT `emai... user" />
+            <marker date="1453352135000" expanded="true" signature="6905:7249" placeholder="INSERT INTO `user`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -380,13 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05882353">
           <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/config/registeredUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05882353">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -419,14 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/register/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="32.142857">
-          <caret line="47" column="48" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/login/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.137255">
@@ -435,23 +604,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/profile/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19607843">
-          <caret line="127" column="65" selection-start-line="127" selection-start-column="65" selection-end-line="127" selection-end-column="65" />
-          <folding>
-            <marker date="1453350167000" expanded="true" signature="1222:1277" placeholder="SELECT `id` user" />
-            <marker date="1453350167000" expanded="true" signature="1222:1300" placeholder="SELECT `id` user" />
-            <marker date="1453350167000" expanded="true" signature="4323:4340" placeholder="..." />
-            <marker date="1453350167000" expanded="true" signature="5143:5167" placeholder="..." />
-            <marker date="1453350167000" expanded="true" signature="5389:5422" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/register/registerResults.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="34.285713">
+        <state vertical-scroll-proportion="0.0">
           <caret line="126" column="77" selection-start-line="126" selection-start-column="77" selection-end-line="126" selection-end-column="77" />
           <folding>
             <marker date="1453352135000" expanded="true" signature="5773:5827" placeholder="SELECT `emai... user" />
@@ -461,26 +616,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/deleteProfile/deleteProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.857143">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/register/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-58.57143">
+          <caret line="82" column="26" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/login/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.857142">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state vertical-scroll-proportion="-1.4285715">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/config/registeredUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05882353">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/updateEmail/updateEmailConfirmation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.857143">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding>
+            <marker date="1453396128000" expanded="true" signature="3740:3794" placeholder="SELECT `emai... user" />
+            <marker date="1453396128000" expanded="true" signature="3740:3808" placeholder="SELECT `emai... user" />
+            <marker date="1453396128000" expanded="true" signature="4654:5057" placeholder="..." />
+            <marker date="1453396128000" expanded="true" signature="4687:4814" placeholder="..." />
+            <marker date="1453396128000" expanded="true" signature="4851:4978" placeholder="..." />
+            <marker date="1453396128000" expanded="true" signature="5425:6204" placeholder="..." />
+            <marker date="1453396128000" expanded="true" signature="5432:6204" placeholder="..." />
+            <marker date="1453396128000" expanded="true" signature="5917:6087" placeholder="..." />
+            <marker date="1453396128000" expanded="true" signature="5926:6078" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/updateEmail/updateEmailResults.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.857143">
+          <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+          <folding>
+            <marker date="1453396446000" expanded="true" signature="728:755" placeholder="UPDATE `user... " />
+            <marker date="1453396446000" expanded="true" signature="728:757" placeholder="UPDATE `user... " />
+            <marker date="1453396446000" expanded="true" signature="728:771" placeholder="UPDATE `user... " />
+            <marker date="1453396446000" expanded="true" signature="728:789" placeholder="UPDATE `user... " />
+            <marker date="1453396446000" expanded="true" signature="728:790" placeholder="UPDATE `user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/updateProfile/updateProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.5686274">
+          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrdResults.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1453396446000" expanded="true" signature="728:789" placeholder="UPDATE `user... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/login/loginResults.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6862745">
-          <caret line="178" column="60" selection-start-line="178" selection-start-column="60" selection-end-line="178" selection-end-column="60" />
+        <state vertical-scroll-proportion="-23.571428">
+          <caret line="178" column="63" selection-start-line="178" selection-start-column="63" selection-end-line="178" selection-end-column="63" />
           <folding>
-            <marker date="1453352420000" expanded="true" signature="3057:3122" placeholder="SELECT `emai... user" />
-            <marker date="1453352420000" expanded="true" signature="4627:4695" placeholder="SELECT `pass... user" />
-            <marker date="1453352420000" expanded="true" signature="6813:6872" placeholder="SELECT * FRO... user" />
-            <marker date="1453352420000" expanded="true" signature="8090:8866" placeholder="..." />
-            <marker date="1453352420000" expanded="true" signature="8097:8866" placeholder="..." />
-            <marker date="1453352420000" expanded="true" signature="8579:8749" placeholder="..." />
-            <marker date="1453352420000" expanded="true" signature="8588:8740" placeholder="{...}" />
+            <marker date="1453392999000" expanded="true" signature="3057:3122" placeholder="SELECT `emai... user" />
+            <marker date="1453392999000" expanded="true" signature="4627:4695" placeholder="SELECT `pass... user" />
+            <marker date="1453392999000" expanded="true" signature="6813:6872" placeholder="SELECT * FRO... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.571428">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding>
+            <marker date="1453391702000" expanded="true" signature="1074:1129" placeholder="SELECT `id` user" />
+            <marker date="1453391702000" expanded="true" signature="1074:1152" placeholder="SELECT `id` user" />
+            <marker date="1453391702000" expanded="true" signature="4176:4193" placeholder="..." />
+            <marker date="1453391702000" expanded="true" signature="4996:5020" placeholder="..." />
+            <marker date="1453391702000" expanded="true" signature="5242:5275" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/updateEmail/updateEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.428572">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <marker date="1453394807000" expanded="true" signature="693:768" placeholder="SELECT `id`,... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.428571">
+          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+          <folding>
+            <marker date="1453397665000" expanded="true" signature="693:743" placeholder="SELECT `user... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrdConfirmation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1764706">
+          <caret line="112" column="52" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
+          <folding>
+            <marker date="1453397857000" expanded="true" signature="3668:3736" placeholder="SELECT `emai... user" />
           </folding>
         </state>
       </provider>

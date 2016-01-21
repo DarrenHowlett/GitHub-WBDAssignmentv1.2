@@ -17,16 +17,8 @@
 		}
 		// /. Open database connection
 
-		// If the user trying to view this page has not registered or logged in, then this message will be displayed.
-		?>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<p class="lead">You Have To Log In To See your Profile.</p>
-				</div>
-			</div>
-		</div>
-		<?php
+		// If a user tries to view their profile before logging in, they will be redirected to the log in page
+		header('Location: ../login/login.php');
 
 	} else {
 		// The user has registered/logged in, they can then see their profile and make any necessary changes.
@@ -61,12 +53,12 @@
 							<thead>
 							<tr>
 								<th>Field Name</th>
-								<th class="profileTH">What We Have Stored</th>
+								<th class="profileTH">What We Have On File</th>
 							</tr>
 							</thead>
 							<tbody>
 							<tr>
-								<td>ID [For Testing SESSIONS ONLY]</td>
+								<td>ID [FOR TESTING PURPOSES ONLY]</td>
 								<td class="profileTD"><?php echo $_SESSION['userID']; ?></td>
 							</tr>
 							<tr>

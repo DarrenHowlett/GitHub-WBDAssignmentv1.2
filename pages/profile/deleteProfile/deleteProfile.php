@@ -2,49 +2,12 @@
 
 	// Sessions/Cookies
 	session_start();
+	if ($_SESSION['loggedIn'] != TRUE) {
 
-	if ($_SESSION['loggedIn'] == TRUE) {
-		?>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<p class="lead">You Are Already Logged In.</p>
-				</div>
-			</div>
-		</div>
-		<?php
+		// If a user tries to access this page without logging in, they will be redirected to the log in page
+		header('Location: ../../login/login.php');
 	} else {
-		?>
-		<!-- Page Content -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<!-- col-lg-6 -->
-				<div class="col-lg-6">
-					<h1>Register</h1>
-					<p class="lead">If you have not already registered with us, you will not be able to buy any goods until you have done so.  Please <a href="../register/register.php">go to the register page</a> to register your details.</p>
-				</div>
-				<!-- /. col-lg-6 -->
-				<!-- col-lg-6 -->
-				<div class="col-lg-6">
-					<h1>Log In</h1>
-					<p class="lead">If you have registered with us and wish to view/amend your profile, or purchase any of our products, you will need to log in using the form below before you can do so.</p>
-				<form method="post" action="loginResults.php">
-					<label for="email">Email:<br>
-						<input id="email" name="email" type="email" required="required">
-					</label><br>
-					<label for="pwrd">Password:<br>
-						<input id="pwrd" name="pwrd" type="password" required="required">
-					</label><br>
-					<input id="submit" name="submit" type="submit">
-				</form>
-				</div>
-				<!-- /. col-lg-6 -->
-			</div>
-			<!-- /.row -->
-		</div>
-		<!-- /.container -->
-		<?php
+		echo "Continue";
 	}
 	// /. Sessions/Cookies
 
@@ -62,7 +25,7 @@
 	<title>Recycling 4 U</title>
 
 	<!-- Bootstrap Core CSS -->
-	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../../css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Custom CSS -->
 	<style>
@@ -75,12 +38,12 @@
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
-	<script src="../../js/html5shiv.min.js"></script>
-	<script src="../../js/respond.min.js"></script>
+	<script src="../../../js/html5shiv.min.js"></script>
+	<script src="../../../js/respond.min.js"></script>
 	<![endif]-->
 
 	<!-- Site Specific Styles -->
-	<link type="text/css" rel="stylesheet" href="../../css/r4ustyles.css">
+	<link type="text/css" rel="stylesheet" href="../../../css/r4ustyles.css">
 
 </head>
 <body>
@@ -96,31 +59,31 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="../../index.php">Recycling 4 U</a>
+			<a class="navbar-brand" href="../../../index.php">Recycling 4 U</a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="../products/productGallery.php">Products</a>
+					<a href="../../products/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../products/productUpload.php">Product Upload</a>
+					<a href="../../products/productUpload.php">Product Upload</a>
 				</li>
 				<li>
-					<a href="../register/register.php">Register</a>
+					<a href="../../register/register.php">Register</a>
 				</li>
 				<li>
-					<a href="../general/contact.php">Contact</a>
+					<a href="../../general/contact.php">Contact</a>
 				</li>
 				<li>
-					<a href="login.php">Log In</a>
+					<a href="../../login/login.php">Log In</a>
 				</li>
 				<li>
-					<a href="../profile/profile.php">My Profile</a>
+					<a href="../../profile/profile.php">My Profile</a>
 				</li>
 				<li>
-					<a href="logout.php">Log Out</a>
+					<a href="../../login/logout.php">Log Out</a>
 				</li>
 			</ul>
 		</div>
@@ -147,7 +110,7 @@
 			<div class="col-lg-4">
 				<h3>Site Map</h3>
 				<ul>
-					<li><a href="../../index.php">Home</a></li>
+					<li><a href="../../../index.php">Home</a></li>
 					<li><a href="#">Products</a>
 						<ul>
 							<li><a href="#">White Goods</a>
@@ -175,12 +138,12 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../products/productUpload.php">Product Upload</a></li>
-					<li><a href="../register/register.php">Register</a></li>
-					<li><a href="../general/contact.php">Contact Us</a></li>
-					<li><a href="login.php">Log In</a></li>
-					<li><a href="../profile/profile.php">My Profile</a></li>
-					<li><a href="logout.php">Log Out</a></li>
+					<li><a href="../../products/productUpload.php">Product Upload</a></li>
+					<li><a href="../../register/register.php">Register</a></li>
+					<li><a href="../../general/contact.php">Contact Us</a></li>
+					<li><a href="../../login/login.php">Log In</a></li>
+					<li><a href="../../profile/profile.php">My Profile</a></li>
+					<li><a href="../../login/logout.php">Log Out</a></li>
 				</ul>
 			</div>
 			<div class="col-lg-4">
@@ -203,10 +166,10 @@
 <!-- /.container -->
 
 <!-- jQuery Version 1.11.1 -->
-<script src="../../js/jquery.js"></script>
+<script src="../../../js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="../../js/bootstrap.min.js"></script>
+<script src="../../../js/bootstrap.min.js"></script>
 
 </body>
 </html>

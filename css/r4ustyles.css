@@ -1,0 +1,86 @@
+/* ---------------------------------------------------
+ * Recycling 4 U Site Specific Styles
+ -------------------------------------------------- */
+
+/* -----------------------------------------
+ * General Styles
+ ---------------------------------------- */
+
+.required {
+    color: red;
+}
+
+/* -----------------------------------------
+ * Page Specific Styles
+ ---------------------------------------- */
+
+.loginMainContent {
+    height: 50em;
+}
+
+/* -----------------------------------------
+ * Tables
+ ---------------------------------------- */
+
+    /* -----------------------------------------
+     * Profile Page Specific
+     ---------------------------------------- */
+
+    .profileTH,
+    .profileTD {
+         padding-left: 2em;
+     }
+
+/* -----------------------------------------
+ * Lists
+ ---------------------------------------- */
+
+    /* -------------------------------------
+     * Generic List Styles
+     ------------------------------------ */
+    .bulletNone li {
+        list-style-type: none; /* Remove any list item bullet points */
+    }
+
+    /* -------------------------------------
+     * Footer Specific
+     ------------------------------------ */
+    footer ul {
+        padding-left: 0; /* Remove the padding-left of each unordered list */
+    }
+
+    footer li {
+        list-style-type: none; /* Hide bullet points on list items */
+        padding-left: 1em; /* Padding-left of each list item to be 1em [usually 16px, based on browser base font size] */
+    }
+
+/* -----------------------------------------
+ * Forms
+ ---------------------------------------- */
+
+input[type="submit"] {
+    box-shadow: none; /* Remove any box-shadow */
+    text-shadow: none; /* Remove any text-shadow */
+    border-radius: 0.25em; /* 4px */
+    border: 0.0625em solid #337ab7; /* 1px Blue */
+    background-color: #337ab7; /* Blue */
+    color: #FFFFFF; /* White */
+    padding: 0.5em; /* 8px */
+}
+
+input[type="reset"] {
+    box-shadow: none; /* Remove any box-shadow */
+    text-shadow: none; /* Remove any text-shadow */
+    border-radius: 0.25em; /* 4px */
+    border: 0.0625em solid #000; /* 1px Black */
+    background-color: #000; /* Black */
+    color: #FFFFFF; /* White */
+    padding: 0.5em; /* 8px */
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+    border: 0.0625em solid #5bc0de; /* 1px Light Blue */
+    background-color: #5bc0de; /* Light Blue */
+}

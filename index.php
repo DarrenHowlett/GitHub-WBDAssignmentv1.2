@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 	<meta charset="utf-8">
@@ -33,7 +32,6 @@
 	<link rel="stylesheet" type="text/css" href="css/r4ustyles.css">
 
 </head>
-
 <body>
 
 <!-- Navigation -->
@@ -53,25 +51,25 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="pages/productGallery.php">Products</a>
+					<a href="pages/products/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="pages/productUpload.php">Product Upload</a>
+					<a href="pages/products/productUpload.php">Product Upload</a>
 				</li>
 				<li>
-					<a href="pages/register.php">Register</a>
+					<a href="pages/register/register.php">Register</a>
 				</li>
 				<li>
-					<a href="pages/contact.php">Contact</a>
+					<a href="pages/general/contact.php">Contact</a>
 				</li>
 				<li>
-					<a href="pages/login.php">Log In</a>
+					<a href="pages/login/login.php">Log In</a>
 				</li>
 				<li>
-					<a href="pages/profile.php">My Profile</a>
+					<a href="pages/profile/profile.php">My Profile</a>
 				</li>
 				<li>
-					<a href="pages/logout.php">Log Out</a>
+					<a href="pages/login/logout.php">Log Out</a>
 				</li>
 			</ul>
 		</div>
@@ -221,10 +219,12 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="pages/contact.php">Contact Us</a></li>
-					<li><a href="pages/register.php">Register</a></li>
-					<li><a href="pages/login.php">Log In</a></li>
-					<li><a href="pages/logout.php">Log Out</a></li>
+					<li><a href="pages/products/productUpload.php">Product Upload</a></li>
+					<li><a href="pages/register/register.php">Register</a></li>
+					<li><a href="pages/general/contact.php">Contact Us</a></li>
+					<li><a href="pages/login/login.php">Log In</a></li>
+					<li><a href="pages/profile/profile.php">My Profile</a></li>
+					<li><a href="pages/login/logout.php">Log Out</a></li>
 				</ul>
 			</div>
 			<div class="col-lg-4">
@@ -256,5 +256,4 @@
 <script src="js/bootstrap.min.js"></script>
 
 </body>
-
 </html>

@@ -110,47 +110,47 @@
 </nav>
 <!-- /.nav -->
 
-    <!-- Page Content -->
-    <?php
+<!-- Page Content -->
+<?php
 
-        $selectPhotos = "SELECT * FROM `product`, `productPhoto` WHERE product.productID = productPhoto.productID AND productPhoto.productPhotoMaster = 1";
-        $selectPhotosResult = $conn -> query($selectPhotos) or die($conn.__LINE__);
+    $selectPhotos = "SELECT * FROM `product`, `productPhoto` WHERE product.productID = productPhoto.productID AND productPhoto.productPhotoMaster = 1";
+    $selectPhotosResult = $conn -> query($selectPhotos) or die($conn.__LINE__);
 
-        while ($selectPhotosRow = $selectPhotosResult -> fetch_assoc()) {
+    while ($selectPhotosRow = $selectPhotosResult -> fetch_assoc()) {
 
-            $_SESSION['productID'] = $selectPhotosRow['productID'];
+        $_SESSION['productID'] = $selectPhotosRow['productID'];
 
-        ?>
-            <!-- container -->
-            <div class="container">
-                <!-- row -->
-                <div class="row">
-                    <!-- class="col-sm-4 col-lg-4 col-md-4" -->
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <!-- class="thumbnail" -->
-                        <div class="thumbnail">
-                            <img src="<?php echo $selectPhotosRow['fileLocation']; ?>" alt="<?php echo $selectPhotosRow['productPhotoName']; ?>">
-                            <!-- class="caption" -->
-                            <div class="caption">
-                                <h4 class="pull-right">$<?php echo $selectPhotosRow['productPrice']; ?></h4>
-                                <h4><?php echo $selectPhotosRow['productName']; ?></h4>
-                                <p><?php echo $selectPhotosRow['productShortDescription']; ?></p>
-                                <form action="productView.php?productID=<?php echo $selectPhotosRow['productID']; ?>" method="post">
-                                    <input id="viewProduct" name="viewProduct" type="submit" value="View Product">
-                                </form>
-                            </div>
-                            <!-- /. class="ratings" -->
+    ?>
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- class="col-sm-4 col-lg-4 col-md-4" -->
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                    <!-- class="thumbnail" -->
+                    <div class="thumbnail">
+                        <img src="<?php echo $selectPhotosRow['fileLocation']; ?>" alt="<?php echo $selectPhotosRow['productPhotoName']; ?>">
+                        <!-- class="caption" -->
+                        <div class="caption">
+                            <h4 class="pull-right">$<?php echo $selectPhotosRow['productPrice']; ?></h4>
+                            <h4><?php echo $selectPhotosRow['productName']; ?></h4>
+                            <p><?php echo $selectPhotosRow['productShortDescription']; ?></p>
+                            <form action="productView.php?productID=<?php echo $selectPhotosRow['productID']; ?>" method="post">
+                                <input id="viewProduct" name="viewProduct" type="submit" value="View Product">
+                            </form>
                         </div>
-                        <!-- /. class="thumbnail" -->
+                        <!-- /. class="ratings" -->
                     </div>
-                    <!-- /. class="col-sm-4 col-lg-4 col-md-4" -->
+                    <!-- /. class="thumbnail" -->
                 </div>
-                <!-- /. row -->
+                <!-- /. class="col-sm-4 col-lg-4 col-md-4" -->
             </div>
-            <!-- /. container -->
-        <?php
-        } // /. while ($selectPhotosRow = $selectPhotosResult -> fetch_assoc())
-        ?>
+            <!-- /. row -->
+        </div>
+        <!-- /. container -->
+    <?php
+    } // /. while ($selectPhotosRow = $selectPhotosResult -> fetch_assoc())
+?>
 
 <div class="container">
 
@@ -174,7 +174,7 @@
                 <h3>Site Map</h3>
                 <ul>
                     <li><a href="../../../index.php">Home</a></li>
-                    <li><a href="#">Products</a>
+                    <li><a href="productGallery.php">Products</a>
                         <ul>
                             <li><a href="#">White Goods</a>
                                 <ul>

@@ -114,7 +114,7 @@
 						// Select ALL The Email Addresses In The Users Table And Check Them Against The New Email Entered,
 						// If The New Email Entered Matches An Email In The Users Table, Display An Error Message
 
-						$select = "SELECT `email` FROM `user` WHERE `email` LIKE BINARY '".$newEmail."'";
+						$select = "SELECT `email` FROM `userTable` WHERE `email` LIKE BINARY '".$newEmail."'";
 						$result = $conn -> query($select) or die($conn.__LINE__);
 
 						// Check New Email Does Not Already Exist
@@ -270,7 +270,7 @@
 				<h3>Site Map</h3>
 				<ul>
 					<li><a href="../../../index.php">Home</a></li>
-					<li><a href="#">Products</a>
+					<li><a href="../../products/gallery/productGallery.php">Products</a>
 						<ul>
 							<li><a href="#">White Goods</a>
 								<ul>

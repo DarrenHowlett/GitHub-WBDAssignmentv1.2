@@ -80,7 +80,7 @@
 			// Select the email from the table user WHERE an email entered in the form matches
 			// is an EXACT match to an email in the database.  It has to be an EXACT match as BINARY has been used in
 			// the query, this is what tells the query to only return exact matches.
-			$select = "SELECT `email` FROM `user` WHERE `email` LIKE BINARY '".$email."'";
+			$select = "SELECT `email` FROM `userTable` WHERE `email` LIKE BINARY '".$email."'";
 
 			// Perform a query on the database using the SQL in the variable $select
 			// and store the result in this $result variable.  As the SQL is asking to return an email address based
@@ -113,7 +113,7 @@
 
 				// Select the record that matches the email entered in the form and return the password associated with
 				// that record.
-				$select = "SELECT `password` FROM `user` WHERE `email` LIKE BINARY '".$email."'";
+				$select = "SELECT `password` FROM `userTable` WHERE `email` LIKE BINARY '".$email."'";
 
 				// Perform the query using the SQL held in the variable $select.
 				$result = $conn->query($select) or die($conn.__LINE__);
@@ -161,7 +161,7 @@
 						}
 						// /. Open database connection
 
-						$select = "SELECT * FROM `user` WHERE `email` LIKE BINARY '".$email."'";
+						$select = "SELECT * FROM `userTable` WHERE `email` LIKE BINARY '".$email."'";
 						$result = $conn->query($select) or die($conn.__LINE__);
 
 						while ($row = $result -> fetch_assoc()) {
@@ -301,7 +301,7 @@
 				<h3>Site Map</h3>
 				<ul>
 					<li><a href="../../index.php">Home</a></li>
-					<li><a href="#">Products</a>
+					<li><a href="../products/gallery/productGallery.php">Products</a>
 						<ul>
 							<li><a href="#">White Goods</a>
 								<ul>

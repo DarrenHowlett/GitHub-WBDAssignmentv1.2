@@ -194,7 +194,7 @@
 				<h3>Site Map</h3>
 				<ul>
 					<li><a href="../../../index.php">Home</a></li>
-					<li><a href="#">Products</a>
+					<li><a href="../gallery/productGallery.php">Products</a>
 						<ul>
 							<li><a href="#">White Goods</a>
 								<ul>

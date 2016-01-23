@@ -145,7 +145,7 @@
 					<?php
 				} else {
 
-					$select = "SELECT `email` FROM `user` WHERE `email` LIKE BINARY '".$email."'";
+					$select = "SELECT `email` FROM `userTable` WHERE `email` LIKE BINARY '".$email."'";
 					$result = $conn -> query($select) or die($conn.__LINE__);
 
 					if ($result = mysqli_num_rows($result) === 1) {
@@ -179,7 +179,7 @@
 							$pwrd = password_hash($pwrd, PASSWORD_DEFAULT);
 
 							// ALL checks have passed, enter user details in to the database
-							$insert = "INSERT INTO `user` (`title`, `forename`, `surname`, `firstLineAddress`, `secondLineAddress`, `town`, `county`, `postcode`, `phone`, `email`, `password`) VALUES ('".$title."', '".$forename."', '".$surname."', '".$firstLineAddress."', '".$secondLineAddress."', '".$town."', '".$county."', '".$postcode."', '".$phone."', '".$email."', '".$pwrd."')";
+							$insert = "INSERT INTO `userTable` (`title`, `forename`, `surname`, `firstLineAddress`, `secondLineAddress`, `town`, `county`, `postcode`, `phone`, `email`, `password`) VALUES ('".$title."', '".$forename."', '".$surname."', '".$firstLineAddress."', '".$secondLineAddress."', '".$town."', '".$county."', '".$postcode."', '".$phone."', '".$email."', '".$pwrd."')";
 							$result = $conn -> query($insert) or die($conn.__LINE__);
 
 							$_SESSION['loggedIn'] = TRUE;
@@ -336,8 +336,8 @@
 			<div class="col-lg-4">
 				<h3>Site Map</h3>
 				<ul>
-					<li><a href="../index.php">Home</a></li>
-					<li><a href="#">Products</a>
+					<li><a href="../../index.php">Home</a></li>
+					<li><a href="../products/gallery/productGallery.php">Products</a>
 						<ul>
 							<li><a href="#">White Goods</a>
 								<ul>

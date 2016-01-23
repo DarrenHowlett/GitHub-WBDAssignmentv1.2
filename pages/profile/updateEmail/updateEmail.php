@@ -24,7 +24,7 @@
 
 			$userID = $_SESSION['userID'];
 
-			$select = "SELECT `email` FROM `user` WHERE `userID` LIKE '".$userID."'";
+			$select = "SELECT `email` FROM `userTable` WHERE `userID` LIKE '".$userID."'";
 			$result = $conn -> query($select) or die($conn.__LINE__);
 
 			while ($row = $result -> fetch_assoc()) {
@@ -119,10 +119,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="../../products/productGallery.php">Products</a>
+					<a href="../../products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../../products/productUpload.php">Product Upload</a>
+					<a href="../../products/upload/productUpload.php">Product Upload</a>
 				</li>
 				<li>
 					<a href="../../register/register.php">Register</a>
@@ -165,7 +165,7 @@
 				<h3>Site Map</h3>
 				<ul>
 					<li><a href="../../../index.php">Home</a></li>
-					<li><a href="#">Products</a>
+					<li><a href="../../products/gallery/productGallery.php">Products</a>
 						<ul>
 							<li><a href="#">White Goods</a>
 								<ul>
@@ -192,7 +192,7 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../../products/productUpload.php">Product Upload</a></li>
+					<li><a href="../../products/upload/productUpload.php">Product Upload</a></li>
 					<li><a href="../../register/register.php">Register</a></li>
 					<li><a href="../../general/contact.php">Contact Us</a></li>
 					<li><a href="../../login/login.php">Log In</a></li>

@@ -24,7 +24,7 @@
 
 			$userID = $_SESSION['userID'];
 
-			$selectProfile = "SELECT `title`, `forename`, `surname`, `firstLineAddress`, `secondLineAddress`, `town`, `county`, `postcode`, `phone` FROM `user` WHERE `userID` = '".$userID."'";
+			$selectProfile = "SELECT `title`, `forename`, `surname`, `firstLineAddress`, `secondLineAddress`, `town`, `county`, `postcode`, `phone` FROM `userTable` WHERE `userID` = '".$userID."'";
 			$profileResult = $conn -> query($selectProfile) or die($conn.__LINE__);
 
 			while ($profileRow = $profileResult -> fetch_assoc()) {
@@ -177,7 +177,7 @@
 				<h3>Site Map</h3>
 				<ul>
 					<li><a href="../../../index.php">Home</a></li>
-					<li><a href="#">Products</a>
+					<li><a href="../../products/gallery/productGallery.php">Products</a>
 						<ul>
 							<li><a href="#">White Goods</a>
 								<ul>

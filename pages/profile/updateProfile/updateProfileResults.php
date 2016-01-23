@@ -37,7 +37,7 @@
 			$phone 				= $_POST['phone'];
 
 			// Update The User's Profile To Reflect The Changes Made in The Form
-			$update = "UPDATE `user` SET
+			$update = "UPDATE `userTable` SET
 					   `title` = '".$title."',
 					   `forename` = '".$forename."',
 					   `surname` = '".$surname."',
@@ -195,7 +195,7 @@
 				<h3>Site Map</h3>
 				<ul>
 					<li><a href="../../../index.php">Home</a></li>
-					<li><a href="#">Products</a>
+					<li><a href="../../products/gallery/productGallery.php">Products</a>
 						<ul>
 							<li><a href="#">White Goods</a>
 								<ul>

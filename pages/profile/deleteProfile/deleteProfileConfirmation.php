@@ -78,7 +78,7 @@
 				// Check Email Entered Matches The Email in The Database Linked To This Users Account
 
 				// First Select The Email In The Database That Matches The Users ID
-				$emailSelect = "SELECT `email` FROM `user` WHERE `userID` LIKE '".$userID."'";
+				$emailSelect = "SELECT `email` FROM `userTable` WHERE `userID` LIKE '".$userID."'";
 				$emailResult = $conn -> query($emailSelect) or die($conn.__LINE__);
 
 				while ($emailRow = $emailResult -> fetch_assoc()) {
@@ -103,7 +103,7 @@
 						// Check The Password Entered Matches The Password In The Database Linked To This Users Account
 
 						// First Select The Password In The Database That Matches The Users ID
-						$pwrdSelect = "SELECT `password` FROM `user` WHERE `userID` = '".$userID."'";
+						$pwrdSelect = "SELECT `password` FROM `userTable` WHERE `userID` = '".$userID."'";
 						$pwrdResult = $conn -> query($pwrdSelect) or die($conn.__LINE__);
 
 						while ($pwrdRow = $pwrdResult -> fetch_assoc()) {
@@ -129,7 +129,7 @@
 							} else {
 
 								// As All Checks Have Passed, Delete The User From THe Database
-								$delete = "DELETE FROM `user` WHERE `userID` = '".$userID."'";
+								$delete = "DELETE FROM `userTable` WHERE `userID` = '".$userID."'";
 								$deleteResult = $conn -> query($delete) or die($conn.__LINE__);
 
 								if (!$deleteResult) {
@@ -234,10 +234,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="../../products/productGallery.php">Products</a>
+					<a href="../../products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../../products/productUpload.php">Product Upload</a>
+					<a href="../../products/upload/productUpload.php">Product Upload</a>
 				</li>
 				<li>
 					<a href="../../register/register.php">Register</a>
@@ -280,7 +280,7 @@
 				<h3>Site Map</h3>
 				<ul>
 					<li><a href="../../../index.php">Home</a></li>
-					<li><a href="#">Products</a>
+					<li><a href="../../products/gallery/productGallery.php">Products</a>
 						<ul>
 							<li><a href="#">White Goods</a>
 								<ul>
@@ -307,7 +307,7 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../../products/productUpload.php">Product Upload</a></li>
+					<li><a href="../../products/upload/productUpload.php">Product Upload</a></li>
 					<li><a href="../../register/register.php">Register</a></li>
 					<li><a href="../../general/contact.php">Contact Us</a></li>
 					<li><a href="../../login/login.php">Log In</a></li>

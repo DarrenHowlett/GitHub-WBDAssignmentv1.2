@@ -26,7 +26,7 @@
 			$userID = $_SESSION['userID'];
 			$newEmail = $_SESSION['newEmail'];
 
-			$update = "UPDATE `user` SET `email` = '".$newEmail."' WHERE `userID` = '".$userID."'";
+			$update = "UPDATE `userTable` SET `email` = '".$newEmail."' WHERE `userID` = '".$userID."'";
 			$result = $conn -> query($update) or die($conn.__LINE__);
 
 			if (!$result) {
@@ -161,7 +161,7 @@
 				<h3>Site Map</h3>
 				<ul>
 					<li><a href="../../../index.php">Home</a></li>
-					<li><a href="#">Products</a>
+					<li><a href="../../products/gallery/productGallery.php">Products</a>
 						<ul>
 							<li><a href="#">White Goods</a>
 								<ul>

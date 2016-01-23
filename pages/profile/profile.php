@@ -35,7 +35,7 @@
 		}
 		// /. Open database connection
 
-		$select = "SELECT `userID` FROM `user` WHERE `email` LIKE BINARY '".$_SESSION['email']."'";
+		$select = "SELECT `userID` FROM `userTable` WHERE `email` LIKE BINARY '".$_SESSION['email']."'";
 		$result = $conn -> query($select) or die($conn.__LINE__);
 
 		while ($row = $result -> fetch_assoc()) {
@@ -254,7 +254,7 @@
 				<h3>Site Map</h3>
 				<ul>
 					<li><a href="../../index.php">Home</a></li>
-					<li><a href="#">Products</a>
+					<li><a href="../products/gallery/productGallery.php">Products</a>
 						<ul>
 							<li><a href="#">White Goods</a>
 								<ul>

@@ -82,7 +82,7 @@
 				// To change the password, the old password entered has to be checked against the password on record,
 				// This SELECT query retrieves the old password based on the users ID from when they logged in and retrieves
 				// the password on file.  Once this has been completed, the password checks can begin.
-				$select = "SELECT `password` FROM `user` WHERE `userID` LIKE $userID";
+				$select = "SELECT `password` FROM `userTable` WHERE `userID` LIKE $userID";
 				$result = $conn -> query($select) or die($conn.__LINE__);
 
 				while ($row = $result -> fetch_assoc()) {
@@ -147,7 +147,7 @@
 								// First The New Password Has To Be Hashed
 								$newPwrd = password_hash($newPwrd, PASSWORD_DEFAULT);
 
-								$update = "UPDATE `user` SET `password` = '".$newPwrd."' WHERE `userID` = '".$userID."'";
+								$update = "UPDATE `userTable` SET `password` = '".$newPwrd."' WHERE `userID` = '".$userID."'";
 								$resultUpdate = $conn -> query($update) or die($conn.__LINE__);
 
 								if (!$resultUpdate) {
@@ -295,7 +295,7 @@
 				<h3>Site Map</h3>
 				<ul>
 					<li><a href="../../../index.php">Home</a></li>
-					<li><a href="#">Products</a>
+					<li><a href="../../products/gallery/productGallery.php">Products</a>
 						<ul>
 							<li><a href="#">White Goods</a>
 								<ul>

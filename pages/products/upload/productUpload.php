@@ -180,7 +180,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="../../products/productGallery.php">Products</a>
+					<a href="../gallery/productGallery.php">Products</a>
 				</li>
 				<li>
 					<a href="productUpload.php">Product Upload</a>

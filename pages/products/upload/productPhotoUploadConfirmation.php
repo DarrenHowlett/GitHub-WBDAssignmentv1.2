@@ -40,92 +40,118 @@
 		}
 		// /. Open database connection
 
-		if (isset($_POST['uploadPhoto'])) {
+		if (isset($_POST['uploadPhotoConfirm'])) {
 
-			// Make variables from session data
-			$productMake 				= $_SESSION['productMake'];
-			$productModel 				= $_SESSION['productModel'];
-			$productName 				= $_SESSION['productName'];
-			$productPrice 				= $_SESSION['productPrice'];
-			$productQtyAvailable 		= $_SESSION['productQtyAvailable'];
-			$productShortDescription 	= $_SESSION['productShortDescription'];
-			$productLongDescription 	= $_SESSION['productLongDescription'];
-			$tags 						= $_SESSION['tags'];
-			$warrantyID 				= $_SESSION['warrantyID'];
+			/* --------------------------------------------
+		 * Variables From File Information
+		-------------------------------------------- */
 
-			// Before any photo can be added to a product, the product's ID needs to be retrieved from the database. As the
-			// products sold on this web site are recycled, even though there may be two items that are the same make, model etc,
-			// the chances of them being identical, unless they came from the same location, is going to be slim.  Because of
-			// this, the ID cannot be retrieved by comparing one piece of information.  So to make sure the ID is retrieved for
-			// the correct product, every field in the database is compared, this will make sure that the correct item is selected.
-			$selectProductID = "SELECT `productID` FROM `product` WHERE
-							`productMake` LIKE BINARY '".$productMake."' AND
-							`productModel` LIKE BINARY '".$productModel."' AND
-							`productName` LIKE BINARY '".$productName."' AND
-							`productPrice` LIKE BINARY '".$productPrice."' AND
-							`productQtyAvailable` LIKE BINARY '".$productQtyAvailable."' AND
-							`productShortDescription` LIKE BINARY '".$productShortDescription."' AND
-							`productLongDescription` LIKE BINARY '".$productLongDescription."' AND
-							`tags` LIKE BINARY '".$tags."' AND
-							`warrantyID` LIKE BINARY '".$warrantyID."'
-							";
-			$productIDResult = $conn -> query($selectProductID) or die($conn.__LINE__);
+			$productID 			= $_SESSION['productID'];
+			$fileName 			= $_FILES['userfile']['name'];
+			$tmpName 			= $_FILES['userfile']['tmp_name'];
+			$fileSize 			= $_FILES['userfile']['size'];
+			$fileType 			= $_FILES['userfile']['type'];
+			$productPhotoName 	= $_POST['productPhotoName'];
+			$folderName 		= $_POST['folderName']; // Returns the value of the dropdown option, not what is
+			// displayed to the user
 
-			while ($productIDRow = $productIDResult -> fetch_assoc()) {
+			// This determines where the file is to be uploaded
+			$uploadDir = '../../../pics/products/'.$folderName.'/';
 
-				$_SESSION['productID'] = $productIDRow['productID'];
-				$productID = $_SESSION['productID'];
+			// This variable takes the path of the directory to which the file is to be uploaded to
+			// and appends the file name to that directory, this is what is uploaded to the database,
+			// the file itself will be uploaded and stored wherever the path pointed to.
+			$filePath = $uploadDir . $fileName;
 
+			$fileName = addslashes($fileName);
+			$filePath = addslashes($filePath);
+
+			$result = move_uploaded_file($tmpName, $filePath);
+			if (!$result) {
+				echo "Error uploading file";
+				exit;
+			}
+
+			/* --------------------------------------------
+			 * User Input From Form Validation
+			-------------------------------------------- */
+
+			// SQL INJECTION COUNTERMEASURES
+			// This only has to apply to fields that allow users to type string data in, fields that
+			// have dropdown boxes, checkboxes, radio buttons etc or are restricted to number input need not be put through sanitation.
+			// The reason inputs restricted to number input do not have to be put through sanitation is, even though the input
+			// will allow for text to be entered in to the input box, any text that is entered will not actually be returned.
+
+			// Escape any special characters, for example O'Conner becomes O\'Conner
+			// The first parameter of mysqli_real_escape_string is the database connection to open,
+			// The second parameter is the string to have the special characters escaped.
+			$productPhotoName = mysqli_real_escape_string($conn, $productPhotoName);
+
+			// Trim any whitespace from the beginning and end of the user input
+			$productPhotoName = trim($productPhotoName);
+
+			// Remove any HTML & PHP tags that may have been injected in to the input
+			$productPhotoName = strip_tags($productPhotoName);
+
+			// Convert any tags that may have slipped through in to string data,
+			// for example <b>Darren</b> becomes &lt;b&gt;Darren&lt;/b&gt;
+			$productPhotoName = htmlentities($productPhotoName);
+
+			/* --------------------------------------------
+			 * Form Checks
+			-------------------------------------------- */
+
+			// Check ALL form entries have been filled in
+			if (empty($productPhotoName)) {
 				?>
-
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12">
-							<!-- Add A Photo To A Product Form -->
-							<form action="productPhotoUploadConfirmation.php" method="post" enctype="multipart/form-data">
-								<div class="col-lg-12">
-									<h3>Product Photo Information</h3>
-									<h4>Photo To Upload</h4>
-									<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-									<input name="userfile" type="file" id="userfile">
-									<h4>File Name</h4>
-									<label for="productPhotoName">
-										<input id="productPhotoName" name="productPhotoName" type="text">
-									</label><br>
-									<h4>Directory To Upload To</h4>
-									<label for="folderName">Folder Name<br>
-										<select id="folderName" name="folderName">
-											<option value="chestFreezer">Chest Freezer</option>
-											<option value="cooker">Cooker</option>
-											<option value="dishwasher">Dishwasher</option>
-											<option value="freezer">Freezer</option>
-											<option value="fridgeFreezer">Fridge Freezer</option>
-											<option value="fridge">Fridge</option>
-											<option value="microwave">Microwave</option>
-											<option value="washingMachine">Washing Machine</option>
-											<option value="cultivator">Cultivator</option>
-											<option value="elctricTool">Electric Tool</option>
-											<option value="hedgeTrimmer">Hedge Trimmer</option>
-											<option value="lawnMower">Lawn Mower</option>
-											<option value="manualTool">Manual Tool</option>
-											<option value="rideOnMower">Ride On Mower</option>
-											<option value="strimmer">Strimmer</option>
-										</select>
-									</label><br><br>
-								</div>
-								<div class="col-lg-12">
-									<input id="uploadPhotoConfirm" name="uploadPhotoConfirm" type="submit" value="Confirm Photo upload">
-								</div>
-							</form>
-							<!-- /. Add A Photo To A Product Form -->
+							<p class="lead">The photo must be given a name.</p>
 						</div>
 					</div>
 				</div>
-
 				<?php
-			} // /. while ($productIDRow = $productIDResult -> fetch_assoc())
+			} else {
 
-		} // /. if (isset($_POST['uploadPhoto']))
+				$insertPhoto = "INSERT INTO `productPhoto`
+								(`fileName`, `fileType`, `fileSize`, `fileLocation`, `productPhotoName`, `productPhotoMaster`, `productID`)
+								VALUES
+								('".$fileName."', '".$fileType."', '".$fileSize."', '".$filePath."', '".$productPhotoName."', 1, '".$productID."')
+								";
+
+				$insertPhotoResult = $conn -> query($insertPhoto) or die($conn.__LINE__);
+
+				if (!$result) {
+
+					?>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<p class="lead">There was an error uploading your file, please contact your system adminsitrator.</p>
+							</div>
+						</div>
+					</div>
+					<?php
+
+				} else {
+
+					?>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<p class="lead">Your product has been uploaded.</p>
+								<a href="productUpload.php">Upload another product.</a>
+							</div>
+						</div>
+					</div>
+					<?php
+
+				} // /. if (!$result)
+
+			} // /. if (empty($productPhotoName))
+
+		} // /. if (isset($_POST['uploadPhotoConfirm']))
 
 	} // /. Sessions/Cookies
 

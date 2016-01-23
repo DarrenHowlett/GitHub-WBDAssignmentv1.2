@@ -77,9 +77,12 @@
 						<div class="col-lg-12">
 							<p class="lead">Your product has been uploaded to the database.  What do you want to do now?</p>
 							<ul class="bulletNone">
-								<li><a href="productPhotoUpload.php">Add a photo to this product</a></li>
 								<li><a href="productUpload.php">Upload another product</a></li>
 							</ul>
+							<p>or</p>
+							<form action="productPhotoUpload.php" method="post">
+								<input id="uploadPhoto" name="uploadPhoto" type="submit" value="Add A Photo To Product">
+							</form>
 						</div>
 					</div>
 				</div>

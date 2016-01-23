@@ -2,32 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f80d02f-bb2c-4cfe-8d1e-5e977c7f6671" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vagrant.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/products/upload/productPhotoUpload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/products/upload/productUpload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/products/upload/productUploadConfirmation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/products/upload/productUploadResults.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/profile/updateProfile/updateProfileConfirmation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/profile/updateProfile/updateProfileResults.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrdResults.php" afterPath="$PROJECT_DIR$/pages/profile/deleteProfile/deleteProfileConfirmation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/products/upload/productPhotoUploadConfirmation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/general/contact.php" afterPath="$PROJECT_DIR$/pages/general/contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login/login.php" afterPath="$PROJECT_DIR$/pages/login/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login/loginResults.php" afterPath="$PROJECT_DIR$/pages/login/loginResults.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login/logout.php" afterPath="$PROJECT_DIR$/pages/login/logout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/profile/deleteProfile/deleteProfile.php" afterPath="$PROJECT_DIR$/pages/profile/deleteProfile/deleteProfile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/profile/profile.php" afterPath="$PROJECT_DIR$/pages/profile/profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/profile/updateEmail/updateEmail.php" afterPath="$PROJECT_DIR$/pages/profile/updateEmail/updateEmail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/profile/updateEmail/updateEmailConfirmation.php" afterPath="$PROJECT_DIR$/pages/profile/updateEmail/updateEmailConfirmation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/profile/updateEmail/updateEmailResults.php" afterPath="$PROJECT_DIR$/pages/profile/updateEmail/updateEmailResults.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/profile/updateProfile/updateProfile.php" afterPath="$PROJECT_DIR$/pages/profile/updateProfile/updateProfile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrd.php" afterPath="$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrdConfirmation.php" afterPath="$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrdConfirmation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/products/upload/productPhotoUpload.php" afterPath="$PROJECT_DIR$/pages/products/upload/productPhotoUpload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/products/upload/productUpload.php" afterPath="$PROJECT_DIR$/pages/products/upload/productUpload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/products/upload/productUploadConfirmation.php" afterPath="$PROJECT_DIR$/pages/products/upload/productUploadConfirmation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/products/upload/productUploadResults.php" afterPath="$PROJECT_DIR$/pages/products/upload/productUploadResults.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/register/register.php" afterPath="$PROJECT_DIR$/pages/register/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/register/registerResults.php" afterPath="$PROJECT_DIR$/pages/register/registerResults.php" />
     </list>
     <ignored path="GitHub-WBDAssignmentv1.2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,7 +29,80 @@
     <favorites_list name="GitHub-WBDAssignmentv1.2" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="productGallery.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/products/gallery/productGallery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.142858">
+              <caret line="120" column="64" selection-start-line="120" selection-start-column="64" selection-end-line="120" selection-end-column="64" />
+              <folding>
+                <marker date="1453525279000" expanded="true" signature="1692:1831" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="1959:10743" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="2051:3732" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="2079:3700" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="2187:2632" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="2311:2537" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="2791:3654" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="2831:3639" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="2852:2936" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="2957:3068" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="3089:3182" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="3203:3293" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="3314:3399" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="3420:3513" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="3534:3621" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="3812:3900" placeholder="SELECT * FRO... product" />
+                <marker date="1453525279000" expanded="true" signature="3812:3940" placeholder="SELECT * FRO... product" />
+                <marker date="1453525279000" expanded="true" signature="4248:5711" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="4311:5660" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="4312:5570" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="4376:5491" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="4436:5490" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="4535:4602" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="4535:5489" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="4784:4869" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="4784:4983" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="4930:4981" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="5368:5402" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="5875:10546" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="6136:6166" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="6136:10538" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="6284:10151" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="6319:6586" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="6390:6423" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="6390:6567" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="6621:9152" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="6977:9133" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="7069:8627" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="7122:8601" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="7155:7875" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="7219:7841" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="7908:8571" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="7980:8537" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="9187:10136" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="9528:10117" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="10177:10524" placeholder="..." />
+                <marker date="1453525279000" expanded="true" signature="10213:10509" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productView.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/products/gallery/productView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.37254903">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+              <folding>
+                <marker date="1453526228000" expanded="true" signature="3959:4128" placeholder="SELECT * FRO... product" />
+                <marker date="1453526228000" expanded="true" signature="5680:5747" placeholder="SELECT `warr... warranty" />
+                <marker date="1453526228000" expanded="true" signature="5680:5763" placeholder="SELECT `warr... warranty" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,16 +121,11 @@
         <option value="$PROJECT_DIR$/pages/profile/updateEmail/updateEmailConfirmation.php" />
         <option value="$PROJECT_DIR$/pages/register/registerResults.php" />
         <option value="$PROJECT_DIR$/pages/profile/updateProfile/updateProfileConfirmation.php" />
-        <option value="$PROJECT_DIR$/pages/register/register.php" />
         <option value="$PROJECT_DIR$/pages/login/login.php" />
         <option value="$PROJECT_DIR$/pages/login/logout.php" />
         <option value="$PROJECT_DIR$/pages/general/contact.php" />
         <option value="$PROJECT_DIR$/pages/login/loginResults.php" />
         <option value="$PROJECT_DIR$/pages/profile/profile.php" />
-        <option value="$PROJECT_DIR$/pages/products/upload/productUpload.php" />
-        <option value="$PROJECT_DIR$/pages/products/upload/productUploadConfirmation.php" />
-        <option value="$PROJECT_DIR$/pages/products/upload/productPhotoUpload.php" />
-        <option value="$PROJECT_DIR$/pages/products/upload/productUploadResults.php" />
         <option value="$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrdConfirmation.php" />
         <option value="$PROJECT_DIR$/pages/profile/updatePwrd/updatePwrd.php" />
         <option value="$PROJECT_DIR$/pages/profile/updateProfile/updateProfile.php" />
@@ -84,6 +133,14 @@
         <option value="$PROJECT_DIR$/pages/profile/updateEmail/updateEmail.php" />
         <option value="$PROJECT_DIR$/pages/profile/updateEmail/updateEmailResults.php" />
         <option value="$PROJECT_DIR$/pages/profile/deleteProfile/deleteProfileConfirmation.php" />
+        <option value="$PROJECT_DIR$/pages/products/upload/productUploadResults.php" />
+        <option value="$PROJECT_DIR$/pages/products/upload/productUpload.php" />
+        <option value="$PROJECT_DIR$/pages/products/upload/productUploadConfirmation.php" />
+        <option value="$PROJECT_DIR$/pages/products/upload/productPhotoUpload.php" />
+        <option value="$PROJECT_DIR$/pages/products/upload/productPhotoUploadConfirmation.php" />
+        <option value="$PROJECT_DIR$/pages/register/register.php" />
+        <option value="$PROJECT_DIR$/pages/products/gallery/productGallery.php" />
+        <option value="$PROJECT_DIR$/pages/products/gallery/productView.php" />
       </list>
     </option>
   </component>
@@ -152,6 +209,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="pics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="microwave" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -173,120 +284,6 @@
               <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="updatePwrd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="updateProfile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="updateEmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deleteProfile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="products" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -320,39 +317,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
+              <option name="myItemId" value="products" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="general" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-WBDAssignmentv1.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="gallery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -364,7 +333,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages/profile/deleteProfile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CollegePHPProject" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
@@ -435,14 +404,26 @@
       <option name="project" value="LOCAL" />
       <updated>1453472832268</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="23-01-2016 Amendments">
+      <created>1453518166274</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1453518166274</updated>
+    </task>
+    <task id="LOCAL-00005" summary="23-01-2016 Amendments">
+      <created>1453518220969</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1453518220969</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1145" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1515625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1515625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -467,7 +448,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added More Functionality To Pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added More Functionality To Pages" />
+    <MESSAGE value="23-01-2016 Amendments" />
+    <option name="LAST_COMMIT_MESSAGE" value="23-01-2016 Amendments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -596,38 +578,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6862745">
-          <caret line="221" column="55" selection-start-line="221" selection-start-column="55" selection-end-line="221" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/r4ustyles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="17.142857">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/register/registerResults.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.3333335">
-          <caret line="366" column="52" selection-start-line="366" selection-start-column="52" selection-end-line="366" selection-end-column="52" />
-          <folding>
-            <marker date="1453510270000" expanded="true" signature="5773:5827" placeholder="SELECT `emai... user" />
-            <marker date="1453510270000" expanded="true" signature="5773:5838" placeholder="SELECT `emai... user" />
-            <marker date="1453510270000" expanded="true" signature="6905:7249" placeholder="INSERT INTO `user`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/register/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.254902">
-          <caret line="216" column="52" selection-start-line="216" selection-start-column="52" selection-end-line="216" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -768,51 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/products/upload/productPhotoUpload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.98039216">
-          <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/products/upload/productUpload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0588236">
-          <caret line="53" column="73" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/products/upload/productUploadConfirmation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.5490196">
-          <caret line="179" column="18" selection-start-line="177" selection-start-column="20" selection-end-line="179" selection-end-column="18" />
-          <folding>
-            <marker date="1453516512000" expanded="true" signature="8086:8103" placeholder="..." />
-            <marker date="1453516512000" expanded="true" signature="8909:8933" placeholder="..." />
-            <marker date="1453516512000" expanded="true" signature="9164:9197" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/products/upload/productUploadResults.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59705883">
-          <caret line="57" column="231" selection-start-line="57" selection-start-column="231" selection-end-line="57" selection-end-column="231" />
-          <folding>
-            <marker date="1453517643000" expanded="true" signature="1853:1971" placeholder="INSERT INTO `product`... " />
-            <marker date="1453517643000" expanded="true" signature="1853:2072" placeholder="INSERT INTO `product`... " />
-            <marker date="1453517643000" expanded="true" signature="1853:2257" placeholder="INSERT INTO `product`... " />
-            <marker date="1453517643000" expanded="true" signature="1853:2258" placeholder="INSERT INTO `product`... " />
-            <marker date="1453517643000" expanded="true" signature="1853:2275" placeholder="INSERT INTO `product`... " />
-            <marker date="1453517643000" expanded="true" signature="3281:3298" placeholder="..." />
-            <marker date="1453517643000" expanded="true" signature="4104:4128" placeholder="..." />
-            <marker date="1453517643000" expanded="true" signature="4359:4392" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/login/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.078431375">
@@ -846,6 +755,161 @@
         <state vertical-scroll-proportion="3.3333333">
           <caret line="168" column="52" selection-start-line="168" selection-start-column="52" selection-end-line="168" selection-end-column="52" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/products/upload/productUploadResults.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7509804">
+          <caret line="83" column="118" selection-start-line="83" selection-start-column="118" selection-end-line="83" selection-end-column="118" />
+          <folding>
+            <marker date="1453519709000" expanded="true" signature="1853:1971" placeholder="INSERT INTO `product`... " />
+            <marker date="1453519709000" expanded="true" signature="1853:2072" placeholder="INSERT INTO `product`... " />
+            <marker date="1453519709000" expanded="true" signature="1853:2257" placeholder="INSERT INTO `product`... " />
+            <marker date="1453519709000" expanded="true" signature="1853:2258" placeholder="INSERT INTO `product`... " />
+            <marker date="1453519709000" expanded="true" signature="1853:2275" placeholder="INSERT INTO `product`... " />
+            <marker date="1453519709000" expanded="true" signature="3388:3405" placeholder="..." />
+            <marker date="1453519709000" expanded="true" signature="4211:4235" placeholder="..." />
+            <marker date="1453519709000" expanded="true" signature="4466:4499" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.88235295">
+          <caret line="258" column="7" selection-start-line="172" selection-start-column="0" selection-end-line="258" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/products/upload/productPhotoUploadConfirmation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32058823">
+          <caret line="212" column="21" selection-start-line="212" selection-start-column="21" selection-end-line="212" selection-end-column="21" />
+          <folding>
+            <marker date="1453522199000" expanded="true" signature="4357:4525" placeholder="INSERT INTO `productPhoto`... " />
+            <marker date="1453522199000" expanded="true" signature="4357:4538" placeholder="INSERT INTO `productPhoto`... " />
+            <marker date="1453522199000" expanded="true" signature="4357:4637" placeholder="INSERT INTO `productPhoto`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/products/upload/productPhotoUpload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4343137">
+          <caret line="186" column="21" selection-start-line="186" selection-start-column="21" selection-end-line="186" selection-end-column="21" />
+          <folding>
+            <marker date="1453522192000" expanded="true" signature="2479:3068" placeholder="SELECT `prod... product" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/products/upload/productUploadConfirmation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37254903">
+          <caret line="243" column="21" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
+          <folding>
+            <marker date="1453522185000" expanded="true" signature="8086:8103" placeholder="..." />
+            <marker date="1453522185000" expanded="true" signature="8909:8933" placeholder="..." />
+            <marker date="1453522185000" expanded="true" signature="9164:9197" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/products/upload/productUpload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37254903">
+          <caret line="183" column="21" selection-start-line="181" selection-start-column="16" selection-end-line="183" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/register/registerResults.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="187.14285">
+          <caret line="18" column="38" selection-start-line="2" selection-start-column="4" selection-end-line="18" selection-end-column="38" />
+          <folding>
+            <marker date="1453510270000" expanded="true" signature="5773:5827" placeholder="SELECT `emai... user" />
+            <marker date="1453510270000" expanded="true" signature="5773:5838" placeholder="SELECT `emai... user" />
+            <marker date="1453510270000" expanded="true" signature="6905:7249" placeholder="INSERT INTO `user`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/register/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19607843">
+          <caret line="143" column="49" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/products/gallery/productGallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.142858">
+          <caret line="120" column="64" selection-start-line="120" selection-start-column="64" selection-end-line="120" selection-end-column="64" />
+          <folding>
+            <marker date="1453525279000" expanded="true" signature="1692:1831" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="1959:10743" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="2051:3732" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="2079:3700" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="2187:2632" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="2311:2537" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="2791:3654" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="2831:3639" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="2852:2936" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="2957:3068" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="3089:3182" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="3203:3293" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="3314:3399" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="3420:3513" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="3534:3621" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="3812:3900" placeholder="SELECT * FRO... product" />
+            <marker date="1453525279000" expanded="true" signature="3812:3940" placeholder="SELECT * FRO... product" />
+            <marker date="1453525279000" expanded="true" signature="4248:5711" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="4311:5660" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="4312:5570" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="4376:5491" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="4436:5490" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="4535:4602" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="4535:5489" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="4784:4869" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="4784:4983" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="4930:4981" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="5368:5402" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="5875:10546" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="6136:6166" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="6136:10538" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="6284:10151" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="6319:6586" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="6390:6423" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="6390:6567" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="6621:9152" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="6977:9133" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="7069:8627" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="7122:8601" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="7155:7875" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="7219:7841" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="7908:8571" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="7980:8537" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="9187:10136" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="9528:10117" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="10177:10524" placeholder="..." />
+            <marker date="1453525279000" expanded="true" signature="10213:10509" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/products/gallery/productView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37254903">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding>
+            <marker date="1453526228000" expanded="true" signature="3959:4128" placeholder="SELECT * FRO... product" />
+            <marker date="1453526228000" expanded="true" signature="5680:5747" placeholder="SELECT `warr... warranty" />
+            <marker date="1453526228000" expanded="true" signature="5680:5763" placeholder="SELECT `warr... warranty" />
+          </folding>
         </state>
       </provider>
     </entry>

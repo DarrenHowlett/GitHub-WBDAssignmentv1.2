@@ -22,7 +22,6 @@
 		// /. Open database connection
 
 		if (isset($_POST['submit'])) {
-
 			$userID 			= $_SESSION['userID'];
 			$email				= $_SESSION['email'];
 			$oldEmail 			= $_POST['oldEmail'];
@@ -79,7 +78,8 @@
 				<?php
 			} else {
 
-				// Check Old Email Matches Profile Email
+				// Check Old Email Matches Profile Email, This Will Stop A User Trying To Change Someone Else's Email
+				// Address Other Than Their Own.
 				if ($oldEmail != $email) {
 
 					?>
@@ -111,6 +111,9 @@
 
 					} else {
 
+						// Select ALL The Email Addresses In The Users Table And Check Them Against The New Email Entered,
+						// If The New Email Entered Matches An Email In The Users Table, Display An Error Message
+
 						$select = "SELECT `email` FROM `user` WHERE `email` LIKE BINARY '".$newEmail."'";
 						$result = $conn -> query($select) or die($conn.__LINE__);
 
@@ -130,10 +133,10 @@
 
 						} else {
 
-							// Confirm Changes
-
-							$_SESSION['oldEmail'] = $oldEmail;
+							// Place New Email In A Sessions Variables.
 							$_SESSION['newEmail'] = $newEmail;
+
+							// Confirm Changes
 
 							?>
 							<div class="container">
@@ -221,10 +224,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="../../products/productGallery.php">Products</a>
+					<a href="../../products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../../products/productUpload.php">Product Upload</a>
+					<a href="../../products/upload/productUpload.php">Product Upload</a>
 				</li>
 				<li>
 					<a href="../../register/register.php">Register</a>
@@ -294,7 +297,7 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../../products/productUpload.php">Product Upload</a></li>
+					<li><a href="../../products/upload/productUpload.php">Product Upload</a></li>
 					<li><a href="../../register/register.php">Register</a></li>
 					<li><a href="../../general/contact.php">Contact Us</a></li>
 					<li><a href="../../login/login.php">Log In</a></li>

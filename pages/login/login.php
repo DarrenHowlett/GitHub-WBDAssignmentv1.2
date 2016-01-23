@@ -102,10 +102,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="../products/productGallery.php">Products</a>
+					<a href="../products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../products/productUpload.php">Product Upload</a>
+					<a href="../products/upload/productUpload.php">Product Upload</a>
 				</li>
 				<li>
 					<a href="../register/register.php">Register</a>
@@ -175,7 +175,7 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../products/productUpload.php">Product Upload</a></li>
+					<li><a href="../products/upload/productUpload.php">Product Upload</a></li>
 					<li><a href="../register/register.php">Register</a></li>
 					<li><a href="../general/contact.php">Contact Us</a></li>
 					<li><a href="login.php">Log In</a></li>

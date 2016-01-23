@@ -6,11 +6,10 @@
 
 		// If a user tries to access this page without logging in, they will be redirected to the log in page
 		header('Location: ../../login/login.php');
-
 	} else {
 
 		// Include/Required files
-		require_once ('../../../admin/config/registeredUser.php');
+		require_once('../../../admin/config/registeredUser.php');
 		// /. Include/Required Files
 
 		// Open database connection
@@ -21,43 +20,165 @@
 		}
 		// /. Open database connection
 
-		if (isset($_POST['submit'])) {
+		if (isset($_POST['confirmDelete'])) {
 
+			$email = $_POST['email'];
+			$pwrd = $_POST['pwrd'];
 			$userID = $_SESSION['userID'];
-			$newEmail = $_SESSION['newEmail'];
 
-			$update = "UPDATE `user` SET `email` = '".$newEmail."' WHERE `userID` = $userID";
-			$result = $conn -> query($update) or die($conn.__LINE__);
+			/* --------------------------------------------
+			 * User Input From Form Validation
+			 -------------------------------------------- */
 
-			if (!$result) {
+			// SQL INJECTION COUNTERMEASURES
+			// This only has to apply to fields that allow users to type string data in, fields that
+			// have dropdown boxes, checkboxes, radio buttons etc or are restricted to number input need not be put through sanitation.
+			// The reason inputs restricted to number input do not have to be put through sanitation is, even though the input
+			// will allow for text to be entered in to the input box, any text that is entered will not actually be returned.
+
+			// Escape any special characters, for example O'Conner becomes O\'Conner
+			// The first parameter of mysqli_real_escape_string is the database connection to open,
+			// The second parameter is the string to have the special characters escaped.
+			$email = mysqli_real_escape_string($conn, $email);
+			$pwrd = mysqli_real_escape_string($conn, $pwrd);
+
+			// Trim any whitespace from the beginning and end of the user input
+			$email = trim($email);
+			$pwrd = trim($pwrd);
+
+			// Remove any HTML & PHP tags that may have been injected in to the input
+			$email = strip_tags($email);
+			$pwrd = strip_tags($pwrd);
+
+			// Convert any tags that may have slipped through in to string data,
+			// for example <b>Darren</b> becomes &lt;b&gt;Darren&lt;/b&gt;
+			$email = htmlentities($email);
+			$pwrd = htmlentities($pwrd);
+
+			/* --------------------------------------------
+			* Form Checks
+			-------------------------------------------- */
+
+			// Check Form Fields Have Been Filled In
+			if (empty($email) || empty($pwrd)) {
+
+				// If Either Of The Form Fields Have Been Left Empty, Display An Error
 				?>
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12">
-							<p class="lead">There was a problem updating your email, please try again later.</p>
+							<p class="lead">Both email and password fields must be filled in.</p>
+							<a href="../profile.php">Back to my profile page.</a>
 						</div>
 					</div>
 				</div>
 				<?php
 			} else {
 
-				$_SESSION['email'] = $newEmail;
-				?>
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<p class="lead">Your email has been updated successfully.</p>
-							<a href="../profile.php">Back To My Profile</a>
+				// Check Email Entered Matches The Email in The Database Linked To This Users Account
+
+				// First Select The Email In The Database That Matches The Users ID
+				$emailSelect = "SELECT `email` FROM `user` WHERE `userID` LIKE '".$userID."'";
+				$emailResult = $conn -> query($emailSelect) or die($conn.__LINE__);
+
+				while ($emailRow = $emailResult -> fetch_assoc()) {
+					$dbEmail = $emailRow['email'];
+
+					if ($email != $dbEmail) {
+
+						// If The Email Entered DOES NOT Match Email In The Database, Display An Error
+						?>
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-12">
+									<p class="lead">The email you entered DOES NOT match the email we have on file, please try again.</p>
+									<a href="../profile.php">Back to my profile page.</a>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<?php
-			} // /. End of update email
+						<?php
 
-		} // /. if (isset($_POST['submit']))
+					} else {
 
-	} // /. else
-	// /. Sessions/Cookies
+						// Check The Password Entered Matches The Password In The Database Linked To This Users Account
+
+						// First Select The Password In The Database That Matches The Users ID
+						$pwrdSelect = "SELECT `password` FROM `user` WHERE `userID` = '".$userID."'";
+						$pwrdResult = $conn -> query($pwrdSelect) or die($conn.__LINE__);
+
+						while ($pwrdRow = $pwrdResult -> fetch_assoc()) {
+							$dbPwrd = $pwrdRow['password'];
+
+							// Verify That The Password Entered Is The Same As The Password in The Database
+							$pwrdCheck = password_verify($pwrd, $dbPwrd);
+
+							if ($pwrdCheck != TRUE) {
+
+								// If The Password Entered DOES NOT Match Password In The Database, Display An Error
+								?>
+								<div class="container">
+									<div class="row">
+										<div class="col-lg-12">
+											<p class="lead">The password you entered DOES NOT match the password we have on file, please try again.</p>
+											<a href="../profile.php">Back to my profile page.</a>
+										</div>
+									</div>
+								</div>
+								<?php
+
+							} else {
+
+								// As All Checks Have Passed, Delete The User From THe Database
+								$delete = "DELETE FROM `user` WHERE `userID` = '".$userID."'";
+								$deleteResult = $conn -> query($delete) or die($conn.__LINE__);
+
+								if (!$deleteResult) {
+
+									// If There Was An Error In Completing THe Delete Query, Display An Error
+									?>
+									<div class="container">
+										<div class="row">
+											<div class="col-lg-12">
+												<p class="lead"><?php echo $delete; ?></p>
+												<p class="lead">There was an error deleting your profile, please try again.</p>
+												<a href="../profile.php">Back to my profile page.</a>
+											</div>
+										</div>
+									</div>
+									<?php
+
+								} else {
+
+									// If The User's Profile Has Successfully Been Deleted From The Database, Show A Success Message
+									?>
+									<div class="container">
+										<div class="row">
+											<div class="col-lg-12">
+												<p class="lead">Your profile has successfully been deleted from our records. If you wish to purchase from us again in the future, you will need to re-register</p>
+												<a href="../profile.php">Back to my profile page.</a>
+											</div>
+										</div>
+									</div>
+									<?php
+
+									// As The User Has Deleted Their Profile, The Session They Had Started Also Has To Be Deleted
+									session_destroy();
+
+								} // /. if (!$deleteResult)
+
+							} // /. if ($pwrdCheck != TRUE)
+
+						} // /. while ($pwrdRow = $pwrdResult -> fetch_assoc())
+
+					} // /. if ($email != $dbEmail)
+
+				} // /. while ($emailRow = $emailResult -> fetch_assoc())
+
+			} // /. if (empty($email) || empty($pwrd))
+
+		} // /. End of if (isset($_POST['updateProfile']))
+
+	} // /. Sessions/Cookies
 
 ?>
 <!DOCTYPE html>

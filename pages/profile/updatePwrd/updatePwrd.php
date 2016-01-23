@@ -24,7 +24,7 @@
 
 			$userID = $_SESSION['userID'];
 
-			$select = "SELECT `password` FROM `user` WHERE `userID` LIKE $userID";
+			$select = "SELECT `password` FROM `user` WHERE `userID` LIKE '".$userID."'";
 			$result = $conn -> query($select) or die($conn.__LINE__);
 
 			while ($row = $result -> fetch_assoc()) {
@@ -34,7 +34,7 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<h1>Update Password</h1>
-							<p class="lead">Please use the form below to update your email address.</p>
+							<p class="lead">Please use the form below to update your password.</p>
 						</div>
 
 						<div class="col-lg-12">
@@ -49,7 +49,7 @@
 									<label for="newPwrdConfirm">Confirm New Password<br>
 										<input id="newPwrdConfirm" name="newPwrdConfirm" type="password">
 									</label><br><br>
-									<input id="submit" name="submit" type="submit" value="Update My Email">
+									<input id="submit" name="submit" type="submit" value="Update My Password">
 								</fieldset>
 							</form>
 						</div>
@@ -119,10 +119,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="../../products/productGallery.php">Products</a>
+					<a href="../../products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../../products/productUpload.php">Product Upload</a>
+					<a href="../../products/upload/productUpload.php">Product Upload</a>
 				</li>
 				<li>
 					<a href="../../register/register.php">Register</a>
@@ -192,7 +192,7 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../../products/productUpload.php">Product Upload</a></li>
+					<li><a href="../../products/upload/productUpload.php">Product Upload</a></li>
 					<li><a href="../../register/register.php">Register</a></li>
 					<li><a href="../../general/contact.php">Contact Us</a></li>
 					<li><a href="../../login/login.php">Log In</a></li>

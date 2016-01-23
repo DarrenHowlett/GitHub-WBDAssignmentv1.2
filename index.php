@@ -51,10 +51,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="pages/products/productGallery.php">Products</a>
+					<a href="pages/products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="pages/products/productUpload.php">Product Upload</a>
+					<a href="pages/products/upload/productUpload.php">Product Upload</a>
 				</li>
 				<li>
 					<a href="pages/register/register.php">Register</a>
@@ -219,7 +219,7 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="pages/products/productUpload.php">Product Upload</a></li>
+					<li><a href="pages/products/upload/productUpload.php">Product Upload</a></li>
 					<li><a href="pages/register/register.php">Register</a></li>
 					<li><a href="pages/general/contact.php">Contact Us</a></li>
 					<li><a href="pages/login/login.php">Log In</a></li>

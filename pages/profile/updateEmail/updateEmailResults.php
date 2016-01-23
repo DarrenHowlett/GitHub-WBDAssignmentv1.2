@@ -26,7 +26,7 @@
 			$userID = $_SESSION['userID'];
 			$newEmail = $_SESSION['newEmail'];
 
-			$update = "UPDATE `user` SET `email` = '".$newEmail."' WHERE `userID` = $userID";
+			$update = "UPDATE `user` SET `email` = '".$newEmail."' WHERE `userID` = '".$userID."'";
 			$result = $conn -> query($update) or die($conn.__LINE__);
 
 			if (!$result) {
@@ -41,6 +41,8 @@
 				<?php
 			} else {
 
+				// As the email address has been changed, the new email address has to overwrite the existing email
+				// held in a session.
 				$_SESSION['email'] = $newEmail;
 				?>
 				<div class="container">
@@ -113,10 +115,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="../../products/productGallery.php">Products</a>
+					<a href="../../products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../../products/productUpload.php">Product Upload</a>
+					<a href="../../products/upload/productUpload.php">Product Upload</a>
 				</li>
 				<li>
 					<a href="../../register/register.php">Register</a>
@@ -186,7 +188,7 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../../products/productUpload.php">Product Upload</a></li>
+					<li><a href="../../products/upload/productUpload.php">Product Upload</a></li>
 					<li><a href="../../register/register.php">Register</a></li>
 					<li><a href="../../general/contact.php">Contact Us</a></li>
 					<li><a href="../../login/login.php">Log In</a></li>

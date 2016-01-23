@@ -22,9 +22,9 @@
 
 		if (isset($_POST['updateEmail'])) {
 
-			$email 	= $_SESSION['email'];
+			$userID = $_SESSION['userID'];
 
-			$select = "SELECT `userID`, `email` FROM `user` WHERE `email` LIKE BINARY '".$email."'";
+			$select = "SELECT `email` FROM `user` WHERE `userID` LIKE '".$userID."'";
 			$result = $conn -> query($select) or die($conn.__LINE__);
 
 			while ($row = $result -> fetch_assoc()) {

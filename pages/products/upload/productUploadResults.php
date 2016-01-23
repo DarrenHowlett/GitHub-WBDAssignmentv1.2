@@ -2,15 +2,35 @@
 
 	// Sessions/Cookies
 	session_start();
+
+	// Sessions/Cookies
+	session_start();
 	if ($_SESSION['loggedIn'] != TRUE) {
 
 		// If a user tries to access this page without logging in, they will be redirected to the log in page
 		header('Location: ../../login/login.php');
+
+	} elseif ($_SESSION['accessLevel'] == 1) {
+
+		// If the user does not have the correct access level, they will be shown an error message
+		?>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="lead">You DO NOT have the correct access level to access this page.  If you are a member of staff, please contact your system administrator.</p>
+				</div>
+			</div>
+		</div>
+		<?php
+
 	} else {
 
+		// If the user trying too access this page has the correct access level then they will be given permission to use this page
+		// and upload a new product as they are at least a member of staff, this will also load the staffMember config file
+
 		// Include/Required files
-		require_once ('../../../admin/config/registeredUser.php');
-		// /. Include/Required Files
+		require_once ('../../../admin/config/staffMember.php');
+		// /. Include/Required files
 
 		// Open database connection
 		$conn = new mysqli($host, $user, $pwrd, $dbase);
@@ -20,36 +40,56 @@
 		}
 		// /. Open database connection
 
-		if (isset($_POST['deleteProfile'])) {
-			?>
-			<!-- Content Container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<!-- col-lg-12 -->
-					<div class="col-lg-12">
-						<p class="lead">Are you sure you wish to delete your profile as this action cannot be undone? Once your profile has been deleted you will have to re-register to use this site.</p>
-						<p>To confirm you wish to delete your profile, please enter your email and password below.</p>
-						<form method="post" action="deleteProfileConfirmation.php">
-							<label for="email">Email<br>
-								<input id="email" name="email" type="email">
-							</label><br>
-							<label for="pwrd">Password<br>
-								<input id="pwrd" name="pwrd" type="password">
-							</label><br>
-							<input id="confirmDelete" name="confirmDelete" type="submit" value="Confirm Profile Deletion">
-						</form>
-					</div>
-					<!-- /. col-lg-12 -->
-				</div>
-				<!-- /. row -->
-			</div>
-			<!-- /. Content Container -->
-			<?php
-		} // /. End of if (isset($_POST['updateProfile']))
+		if (isset($_POST['confirmProductDetails'])) {
 
-	}
-	// /. Sessions/Cookies
+			$productMake 				= $_SESSION['productMake'];
+			$productModel 				= $_SESSION['productModel'];
+			$productName 				= $_SESSION['productName'];
+			$productPrice 				= $_SESSION['productPrice'];
+			$productQtyAvailable 		= $_SESSION['productQtyAvailable'];
+			$productShortDescription 	= $_SESSION['productShortDescription'];
+			$productLongDescription 	= $_SESSION['productLongDescription'];
+			$tags 						= $_SESSION['tags'];
+			$warrantyID 				= $_SESSION['warrantyID'];
+
+			$insertProduct = "INSERT INTO `product`
+							  (`productMake`, `productModel`, `productName`, `productPrice`, `productQtyAvailable`, `productShortDescription`, `productLongDescription`, `tags`, `warrantyID`)
+							  VALUES
+							  ('".$productMake."', '".$productModel."', '".$productName."', '".$productPrice."', '".$productQtyAvailable."', '".$productShortDescription."', '".$productLongDescription."', '".$tags."', '".$warrantyID."')";
+
+			$insertProductResult = $conn -> query($insertProduct) or die($conn.__LINE__);
+
+			if (!$insertProductResult) {
+				?>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<p class="lead">There was an error uploading your product to the database, please try again</p>
+							<a href="productUpload.php">Go back to Product Upload page</a> and try again.
+						</div>
+					</div>
+				</div>
+				<?php
+			} else {
+				?>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<p class="lead">Your product has been uploaded to the database.  What do you want to do now?</p>
+							<ul class="bulletNone">
+								<li><a href="productPhotoUpload.php">Add a photo to this product</a></li>
+								<li><a href="productUpload.php">Upload another product</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<?php
+			}
+
+		} // /.if (isset($_POST['newProduct']))
+
+
+	} // /. Sessions/Cookies
 
 ?>
 <!DOCTYPE html>
@@ -108,7 +148,7 @@
 					<a href="../../products/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../../products/productUpload.php">Product Upload</a>
+					<a href="productUpload.php">Product Upload</a>
 				</li>
 				<li>
 					<a href="../../register/register.php">Register</a>
@@ -178,7 +218,7 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../../products/productUpload.php">Product Upload</a></li>
+					<li><a href="productUpload.php">Product Upload</a></li>
 					<li><a href="../../register/register.php">Register</a></li>
 					<li><a href="../../general/contact.php">Contact Us</a></li>
 					<li><a href="../../login/login.php">Log In</a></li>

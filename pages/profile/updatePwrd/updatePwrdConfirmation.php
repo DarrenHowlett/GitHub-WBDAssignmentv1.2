@@ -65,7 +65,9 @@
 			$newPwrd = htmlentities($newPwrd);
 			$newPwrdConfirm = htmlentities($newPwrdConfirm);
 
+			// Check ALL Form Fields Have Been Filled In
 			if (empty($oldPwrd) || empty($newPwrd) || empty($newPwrdConfirm)) {
+				// If Form Fields Have Been Left Empty, Display An Error
 				?>
 				<div class="container">
 					<div class="row">
@@ -77,31 +79,27 @@
 				</div>
 				<?php
 			} else {
+				// To change the password, the old password entered has to be checked against the password on record,
+				// This SELECT query retrieves the old password based on the users ID from when they logged in and retrieves
+				// the password on file.  Once this has been completed, the password checks can begin.
+				$select = "SELECT `password` FROM `user` WHERE `userID` LIKE $userID";
+				$result = $conn -> query($select) or die($conn.__LINE__);
 
-				// Check Old Email Matches Profile Email
-				if ($oldPwrd != $pwrd) {
+				while ($row = $result -> fetch_assoc()) {
 
-					?>
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-12">
-								<p class="lead">Your old email does not match what we have on record, please try again.</p>
-								<a href="../profile.php">Back to profile page.</a>
-							</div>
-						</div>
-					</div>
-					<?php
+					// Store the password retrieved from the users record as a variable
+					$pwrd = $row['password'];
 
-				} else {
+					// Check Old Password Entered Matches The Password On File
+					$pwrdCheck = password_verify($oldPwrd, $pwrd);
+					if ($pwrdCheck != TRUE) {
 
-					// Check New Email And New Email Confirm Match
-					if ($newPwrd != $newPwrdConfirm) {
-
+						// If Passwords DO NOT Match, Display An Error
 						?>
 						<div class="container">
 							<div class="row">
 								<div class="col-lg-12">
-									<p class="lead">New Email and Confirm New Email DO NOT match, please try again.</p>
+									<p class="lead">Your old password does not match what we have on record, please try again.</p>
 									<a href="../profile.php">Back to profile page.</a>
 								</div>
 							</div>
@@ -110,17 +108,15 @@
 
 					} else {
 
-						$select = "SELECT `email` FROM `user` WHERE `email` LIKE BINARY '".$newEmail."'";
-						$result = $conn -> query($select) or die($conn.__LINE__);
+						// Check New Password And Confirm New Password Match
+						if ($newPwrd != $newPwrdConfirm) {
 
-						// Check New Email Does Not Already Exist
-						if ($result = mysqli_num_rows($result) == 1) {
-
+							// If New Password And Confirm New Password DO NOT Match, Display An Error
 							?>
 							<div class="container">
 								<div class="row">
 									<div class="col-lg-12">
-										<p class="lead">The new email you entered already exists, either please try again, or login with that email.</p>
+										<p class="lead">New Password and Confirm New Password DO NOT match, please try again.</p>
 										<a href="../profile.php">Back to profile page.</a>
 									</div>
 								</div>
@@ -129,37 +125,70 @@
 
 						} else {
 
-							// Confirm Changes
+							// Check New Password Is NOT The Same As The Old Password
+							if ($oldPwrd == $newPwrd) {
 
-							$_SESSION['oldEmail'] = $oldEmail;
-							$_SESSION['newEmail'] = $newEmail;
-
-							?>
-							<div class="container">
-								<div class="row">
-									<div class="col-lg-12">
-									<p class="lead">Confirm Changes</p>
-									<form action="updateEmailResults.php" method="post">
-										<label for="oldEmail">Old Email<br>
-											<input id="oldEmail" name="oldEmail" type="email" value="<?php echo $oldEmail; ?>">
-										</label><br>
-										<label for="newEmail">New Email<br>
-											<input id="newEmail" name="newEmail" type="email" value="<?php echo $newEmail; ?>">
-										</label><br>
-										<input id="submit" name="submit" type="submit">
-									</form>
+								// If New Password And Confirm New Password DO NOT Match, Display An Error
+								?>
+								<div class="container">
+									<div class="row">
+										<div class="col-lg-12">
+											<p class="lead">You CANNOT change your password to what is already held on file, please try again.</p>
+											<a href="../profile.php">Back to profile page.</a>
+										</div>
 									</div>
 								</div>
-							</div>
-							<?php
+								<?php
 
-						} //. Confirm Changes
+							} else {
 
-					} // /. Check New Email Does Not Already Exist
+								// Once ALL The Above Checks Pass, Then The New Password Can Be Entered In To The Database
 
-				} //. Check New Email And New Email Confirm Match
+								// First The New Password Has To Be Hashed
+								$newPwrd = password_hash($newPwrd, PASSWORD_DEFAULT);
 
-			} // /. Check Old Email Matches Profile Email
+								$update = "UPDATE `user` SET `password` = '".$newPwrd."' WHERE `userID` = '".$userID."'";
+								$resultUpdate = $conn -> query($update) or die($conn.__LINE__);
+
+								if (!$resultUpdate) {
+									?>
+									<div class="container">
+										<div class="row">
+											<div class="col-lg-12">
+												<p class="lead">there was a problem updating your password, please try again.</p>
+												<a href="../profile.php">Back to profile page.</a>
+											</div>
+										</div>
+									</div>
+									<?php
+								} else {
+									?>
+									<div class="container">
+										<div class="row">
+											<div class="col-lg-12">
+												<p class="lead">Your password has successfully been changed. To continue using the site <a href="../../login/login.php">please log in again</a> using your new password.</p>
+											</div>
+										</div>
+									</div>
+									<?php
+									// After The New Password Has Been Entered In To The Database The Session That Has Been Started Will Have
+									// To Be Destroyed, This Will Log The User Out Of The Current Session, A Message Will Be Displayed To Show
+									// The User That Their Password Has Been Changed And That They Will Need To Log In Again To Continue Using
+									// The Site
+									session_destroy();
+
+
+								} // /.Enter New Password in To The Database
+
+							} // /. Check New Password Is NOT The Same As The Old Password
+
+						} // /. Check New Password And Confirm New Password Match
+
+					} // /. Check Old Password Entered Matches The Password On File
+
+				} // /. while ($row = $result -> fetch_assoc())
+
+			} // /. Check ALL Form Fields Have Been Filled In
 
 		} // /. if (isset($_POST['updateProfile']))
 
@@ -220,10 +249,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="../../products/productGallery.php">Products</a>
+					<a href="../../products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../../products/productUpload.php">Product Upload</a>
+					<a href="../../products/upload/productUpload.php">Product Upload</a>
 				</li>
 				<li>
 					<a href="../../register/register.php">Register</a>
@@ -293,7 +322,7 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../../products/productUpload.php">Product Upload</a></li>
+					<li><a href="../../products/upload/productUpload.php">Product Upload</a></li>
 					<li><a href="../../register/register.php">Register</a></li>
 					<li><a href="../../general/contact.php">Contact Us</a></li>
 					<li><a href="../../login/login.php">Log In</a></li>

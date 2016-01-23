@@ -20,36 +20,80 @@
 		}
 		// /. Open database connection
 
-		if (isset($_POST['deleteProfile'])) {
-			?>
-			<!-- Content Container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<!-- col-lg-12 -->
-					<div class="col-lg-12">
-						<p class="lead">Are you sure you wish to delete your profile as this action cannot be undone? Once your profile has been deleted you will have to re-register to use this site.</p>
-						<p>To confirm you wish to delete your profile, please enter your email and password below.</p>
-						<form method="post" action="deleteProfileConfirmation.php">
-							<label for="email">Email<br>
-								<input id="email" name="email" type="email">
-							</label><br>
-							<label for="pwrd">Password<br>
-								<input id="pwrd" name="pwrd" type="password">
-							</label><br>
-							<input id="confirmDelete" name="confirmDelete" type="submit" value="Confirm Profile Deletion">
-						</form>
-					</div>
-					<!-- /. col-lg-12 -->
-				</div>
-				<!-- /. row -->
-			</div>
-			<!-- /. Content Container -->
-			<?php
-		} // /. End of if (isset($_POST['updateProfile']))
+		if (isset($_POST['confirmProfile'])) {
 
-	}
-	// /. Sessions/Cookies
+			// Call The User's ID That Is Stored In A Session
+			$userID 			= $_SESSION['userID'];
+
+			// Put Whatever Is In the Form Fields in To Variables
+			$title 				= $_POST['title'];
+			$forename 			= $_POST['forename'];
+			$surname 			= $_POST['surname'];
+			$firstLineAddress 	= $_POST['firstLineAddress'];
+			$secondLineAddress 	= $_POST['secondLineAddress'];
+			$town 				= $_POST['town'];
+			$county 			= $_POST['county'];
+			$postcode 			= $_POST['postcode'];
+			$phone 				= $_POST['phone'];
+
+			// Update The User's Profile To Reflect The Changes Made in The Form
+			$update = "UPDATE `user` SET
+					   `title` = '".$title."',
+					   `forename` = '".$forename."',
+					   `surname` = '".$surname."',
+					   `firstLineAddress` = '".$firstLineAddress."',
+					   `secondLineAddress` = '".$secondLineAddress."',
+					   `town` = '".$town."',
+					   `county` = '".$county."',
+					   `postcode` = '".$postcode."',
+					   `phone` = '".$phone."'
+					   WHERE `userID` = '".$userID."'";
+
+			$result = $conn -> query($update) or die($conn.__LINE__);
+
+			if (!$result) {
+
+				// If No Result Is Returned From The Database, Display An Error Message
+				?>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<p class="lead">There was a problem updating your profile, please try again later.</p>
+							<a href="../profile.php">Back to profile page.</a>
+						</div>
+					</div>
+				</div>
+				<?php
+			} else {
+
+				// If The Database Was Updated Successfully, Display A Success Message
+				?>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<p class="lead">Your profile has been updated successfully.</p>
+							<a href="../profile.php">Back to profile page.</a>
+						</div>
+					</div>
+				</div>
+				<?php
+
+				// As There Have BEen Changes Made, The Session Variables Also Need To Be Changed.
+				$_SESSION['title'] 				= $title;
+				$_SESSION['forename'] 			= $forename;
+				$_SESSION['surname'] 			= $surname;
+				$_SESSION['firstLineAddress'] 	= $firstLineAddress;
+				$_SESSION['secondLineAddress'] 	= $secondLineAddress;
+				$_SESSION['town'] 				= $town;
+				$_SESSION['county'] 			= $county;
+				$_SESSION['postcode'] 			= $postcode;
+				$_SESSION['phone'] 				= $phone;
+
+			} // /.if (!$result)
+
+		} // /. if (isset($_POST['confirmProfile']))
+		
+	} // /. Sessions/Cookies
 
 ?>
 <!DOCTYPE html>
@@ -105,10 +149,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="../../products/productGallery.php">Products</a>
+					<a href="../../products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../../products/productUpload.php">Product Upload</a>
+					<a href="../../products/upload/productUpload.php">Product Upload</a>
 				</li>
 				<li>
 					<a href="../../register/register.php">Register</a>
@@ -178,7 +222,7 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../../products/productUpload.php">Product Upload</a></li>
+					<li><a href="../../products/upload/productUpload.php">Product Upload</a></li>
 					<li><a href="../../register/register.php">Register</a></li>
 					<li><a href="../../general/contact.php">Contact Us</a></li>
 					<li><a href="../../login/login.php">Log In</a></li>

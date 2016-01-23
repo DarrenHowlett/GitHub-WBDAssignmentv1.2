@@ -7,7 +7,73 @@
 		// If a user tries to access this page without logging in, they will be redirected to the log in page
 		header('Location: ../../login/login.php');
 	} else {
-		echo "Continue";
+
+		// Include/Required files
+		require_once ('../../../admin/config/registeredUser.php');
+		// /. Include/Required Files
+
+		// Open database connection
+		$conn = new mysqli($host, $user, $pwrd, $dbase);
+		if (mysqli_connect_errno()) {
+			printf("Database connection failed due to: %s\n", mysqli_connect_error());
+			exit();
+		}
+		// /. Open database connection
+
+		if (isset($_POST['profileUpdate'])) {
+
+			$userID = $_SESSION['userID'];
+
+			$selectProfile = "SELECT `title`, `forename`, `surname`, `firstLineAddress`, `secondLineAddress`, `town`, `county`, `postcode`, `phone` FROM `user` WHERE `userID` = '".$userID."'";
+			$profileResult = $conn -> query($selectProfile) or die($conn.__LINE__);
+
+			while ($profileRow = $profileResult -> fetch_assoc()) {
+
+				?>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<p class="lead">The form below will be populated with what we currently have on file for you.  For any changes you wish to make, just amend the field where you wish to make a change.</p>
+							<form action="updateProfileConfirmation.php" method="post">
+								<label for="title">Title<br>
+									<input id="title" name="title" type="text" value="<?php echo $profileRow['title']; ?>">
+								</label><br>
+								<label for="forename">Forename<br>
+									<input id="forename" name="forename" type="text" value="<?php echo $profileRow['forename']; ?>">
+								</label><br>
+								<label for="surname">Surname<br>
+									<input id="surname" name="surname" type="text" value="<?php echo $profileRow['surname']; ?>">
+								</label><br>
+								<label for="firstLineAddress">1st Line Address<br>
+									<input id="firstLineAddress" name="firstLineAddress" type="text" value="<?php echo $profileRow['firstLineAddress']; ?>">
+								</label><br>
+								<label for="secondLineAddress">2nd Line Address<br>
+									<input id="secondLineAddress" name="secondLineAddress" type="text" value="<?php echo $profileRow['secondLineAddress']; ?>">
+								</label><br>
+								<label for="town">Town<br>
+									<input id="town" name="town" type="text" value="<?php echo $profileRow['town']; ?>">
+								</label><br>
+								<label for="county">County<br>
+									<input id="county" name="county" type="text" value="<?php echo $profileRow['county']; ?>">
+								</label><br>
+								<label for="postcode">Postcode<br>
+									<input id="postcode" name="postcode" type="text" value="<?php echo $profileRow['postcode']; ?>">
+								</label><br>
+								<label for="phone">Phone<br>
+									<input id="phone" name="phone" type="tel" value="<?php echo $profileRow['phone']; ?>">
+								</label><br><br>
+								<input id="updateProfile" name="updateProfile" type="submit" value="Confirm My Profile Changes">
+							</form>
+							<p>If you DO NOT wish to make any changes, <a href="../profile.php">please go back to your profile.</a></p>
+						</div>
+					</div>
+				</div>
+				<?php
+
+			} // /. while ($profileRow = $profileResult -> fetch_assoc())
+
+		} // /. if (isset($_POST['profileUpdate']))
+
 	}
 	// /. Sessions/Cookies
 
@@ -65,10 +131,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="../../products/productGallery.php">Products</a>
+					<a href="../../products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../../products/productUpload.php">Product Upload</a>
+					<a href="../../products/upload/productUpload.php">Product Upload</a>
 				</li>
 				<li>
 					<a href="../../register/register.php">Register</a>
@@ -138,7 +204,7 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../../products/productUpload.php">Product Upload</a></li>
+					<li><a href="../../products/upload/productUpload.php">Product Upload</a></li>
 					<li><a href="../../register/register.php">Register</a></li>
 					<li><a href="../../general/contact.php">Contact Us</a></li>
 					<li><a href="../../login/login.php">Log In</a></li>

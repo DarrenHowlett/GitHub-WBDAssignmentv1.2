@@ -20,36 +20,120 @@
 		}
 		// /. Open database connection
 
-		if (isset($_POST['deleteProfile'])) {
-			?>
-			<!-- Content Container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<!-- col-lg-12 -->
-					<div class="col-lg-12">
-						<p class="lead">Are you sure you wish to delete your profile as this action cannot be undone? Once your profile has been deleted you will have to re-register to use this site.</p>
-						<p>To confirm you wish to delete your profile, please enter your email and password below.</p>
-						<form method="post" action="deleteProfileConfirmation.php">
-							<label for="email">Email<br>
-								<input id="email" name="email" type="email">
-							</label><br>
-							<label for="pwrd">Password<br>
-								<input id="pwrd" name="pwrd" type="password">
-							</label><br>
-							<input id="confirmDelete" name="confirmDelete" type="submit" value="Confirm Profile Deletion">
-						</form>
-					</div>
-					<!-- /. col-lg-12 -->
-				</div>
-				<!-- /. row -->
-			</div>
-			<!-- /. Content Container -->
-			<?php
-		} // /. End of if (isset($_POST['updateProfile']))
+		if (isset($_POST['updateProfile'])) {
 
-	}
-	// /. Sessions/Cookies
+			$title 				= $_POST['title'];
+			$forename 			= $_POST['forename'];
+			$surname 			= $_POST['surname'];
+			$firstLineAddress 	= $_POST['firstLineAddress'];
+			$secondLineAddress 	= $_POST['secondLineAddress'];
+			$town 				= $_POST['town'];
+			$county 			= $_POST['county'];
+			$postcode 			= $_POST['postcode'];
+			$phone 				= $_POST['phone'];
+
+			/* --------------------------------------------
+			 * User Input From Form Validation
+			-------------------------------------------- */
+
+			// SQL INJECTION COUNTERMEASURES
+			// This only has to apply to fields that allow users to type string data in, fields that
+			// have dropdown boxes, checkboxes, radio buttons etc or are restricted to number input need not be put through sanitation.
+			// The reason inputs restricted to number input do not have to be put through sanitation is, even though the input
+			// will allow for text to be entered in to the input box, any text that is entered will not actually be returned.
+
+			// Escape any special characters, for example O'Conner becomes O\'Conner
+			// The first parameter of mysqli_real_escape_string is the database connection to open,
+			// The second parameter is the string to have the special characters escaped.
+			$title = mysqli_real_escape_string($conn, $title);
+			$forename = mysqli_real_escape_string($conn, $forename);
+			$surname = mysqli_real_escape_string($conn, $surname);
+			$firstLineAddress = mysqli_real_escape_string($conn, $firstLineAddress);
+			$secondLineAddress = mysqli_real_escape_string($conn, $secondLineAddress);
+			$town = mysqli_real_escape_string($conn, $town);
+			$county = mysqli_real_escape_string($conn, $county);
+			$postcode = mysqli_real_escape_string($conn, $postcode);
+			$phone = mysqli_real_escape_string($conn, $phone);
+
+			// Trim any whitespace from the beginning and end of the user input
+			$title = trim($title);
+			$forename = trim($forename);
+			$surname = trim($surname);
+			$firstLineAddress = trim($firstLineAddress);
+			$secondLineAddress = trim($secondLineAddress);
+			$town = trim($town);
+			$county = trim($county);
+			$postcode = trim($postcode);
+			$phone = trim($phone);
+
+			// Remove any HTML & PHP tags that may have been injected in to the input
+			$title = strip_tags($title);
+			$forename = strip_tags($forename);
+			$surname = strip_tags($surname);
+			$firstLineAddress = strip_tags($firstLineAddress);
+			$secondLineAddress = strip_tags($secondLineAddress);
+			$town = strip_tags($town);
+			$county = strip_tags($county);
+			$postcode = strip_tags($postcode);
+			$phone = strip_tags($phone);
+
+			// Convert any tags that may have slipped through in to string data,
+			// for example <b>Darren</b> becomes &lt;b&gt;Darren&lt;/b&gt;
+			$title = htmlentities($title);
+			$forename = htmlentities($forename);
+			$surname = htmlentities($surname);
+			$firstLineAddress = htmlentities($firstLineAddress);
+			$secondLineAddress = htmlentities($secondLineAddress);
+			$town = htmlentities($town);
+			$county = htmlentities($county);
+			$postcode = htmlentities($postcode);
+			$phone = htmlentities($phone);
+
+			?>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<form action="updateProfileResults.php" method="post">
+							<label for="title">Title<br>
+								<input id="title" name="title" type="text" value="<?php echo $title; ?>">
+							</label><br>
+							<label for="forename">Forename<br>
+								<input id="forename" name="forename" type="text" value="<?php echo $forename; ?>">
+							</label><br>
+							<label for="surname">Surname<br>
+								<input id="surname" name="surname" type="text" value="<?php echo $surname; ?>">
+							</label><br>
+							<label for="firstLineAddress">1st Line Address<br>
+								<input id="firstLineAddress" name="firstLineAddress" type="text" value="<?php echo $firstLineAddress; ?>">
+							</label><br>
+							<label for="secondLineAddress">2nd Line Address<br>
+								<input id="secondLineAddress" name="secondLineAddress" type="text" value="<?php echo $secondLineAddress; ?>">
+							</label><br>
+							<label for="town">Town<br>
+								<input id="town" name="town" type="text" value="<?php echo $town; ?>">
+							</label><br>
+							<label for="county">County<br>
+								<input id="county" name="county" type="text" value="<?php echo $county; ?>">
+							</label><br>
+							<label for="postcode">Postcode<br>
+								<input id="postcode" name="postcode" type="text" value="<?php echo $postcode; ?>">
+							</label><br>
+							<label for="phone">Phone<br>
+								<input id="phone" name="phone" type="tel" value="<?php echo $phone; ?>">
+							</label><br><br>
+							<input id="confirmProfile" name="confirmProfile" type="submit" value="Apply My Profile Changes">
+						</form>
+						<p>If you DO NOT wish to apply these change, <a href="../profile.php">please go back to your profile.</a></p>
+					</div>
+				</div>
+			</div>
+
+			<?php
+
+		} // /.if (isset($_POST['submit']))
+		
+	} // /. Sessions/Cookies
+
 
 ?>
 <!DOCTYPE html>
@@ -105,10 +189,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="../../products/productGallery.php">Products</a>
+					<a href="../../products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../../products/productUpload.php">Product Upload</a>
+					<a href="../../products/upload/productUpload.php">Product Upload</a>
 				</li>
 				<li>
 					<a href="../../register/register.php">Register</a>
@@ -178,7 +262,7 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../../products/productUpload.php">Product Upload</a></li>
+					<li><a href="../../products/upload/productUpload.php">Product Upload</a></li>
 					<li><a href="../../register/register.php">Register</a></li>
 					<li><a href="../../general/contact.php">Contact Us</a></li>
 					<li><a href="../../login/login.php">Log In</a></li>

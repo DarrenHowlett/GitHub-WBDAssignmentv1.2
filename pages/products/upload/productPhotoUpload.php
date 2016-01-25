@@ -73,8 +73,8 @@
 
 			while ($productIDRow = $productIDResult -> fetch_assoc()) {
 
-				$_SESSION['productID'] = $productIDRow['productID'];
-				$productID = $_SESSION['productID'];
+				$_SESSION['newProductID'] = $productIDRow['productID'];
+				$newProductID = $_SESSION['newProductID'];
 
 				?>
 

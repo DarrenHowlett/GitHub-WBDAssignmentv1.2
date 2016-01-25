@@ -85,9 +85,6 @@
                     <a href="productGallery.php">Products</a>
                 </li>
                 <li>
-                    <a href="../../products/upload/productUpload.php">Product Upload</a>
-                </li>
-                <li>
                     <a href="../../register/register.php">Register</a>
                 </li>
                 <li>
@@ -102,6 +99,15 @@
                 <li>
                     <a href="../../login/logout.php">Log Out</a>
                 </li>
+                <li>
+                    <a href="../../products/upload/productUpload.php" <?php
+
+                        if ($_SESSION['loggedIn'] != TRUE || $_SESSION['accessLevel'] <= 1) {
+                            echo 'class="hideMe"';
+                        }
+
+                    ?>>Product Upload</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -115,18 +121,16 @@
 
 <?php
 
-    if (isset($_POST['productView'])) {
+    if (isset($_GET['id'])) {
 
-        $getProductID = $_SESSION['getProductID'];
-
-        echo "ProductID: ".$productID."<br>";
-        echo "SessionID: ".$_SESSION['getProductID'];
+        $_SESSION['getProductID'] = $_GET['id'];
+        $productID = $_SESSION['getProductID'];
 
         $selectProduct = "SELECT * FROM `product`, `productPhoto` WHERE product.productID = '".$productID."' AND product.productID = productPhoto.productID AND productPhoto.productPhotoMaster = 1";
         $selectProductResult = $conn -> query($selectProduct) or die($conn.__LINE__);
 
         while ($selectProductRow = $selectProductResult -> fetch_assoc()) {
-        ?>
+            ?>
             <!-- Portfolio Item Heading -->
             <div class="row">
                 <div class="col-lg-12">
@@ -178,10 +182,10 @@
             </div>
             <!-- /.row -->
 
-        <?php
+            <?php
         } // /. while ($selectProductRow = $selectProductResult -> fetch_assoc())
 
-    } // /. if (isset($_POST['viewProduct']))
+    }
 
 ?>
 
@@ -234,7 +238,15 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="../../products/upload/productUpload.php">Product Upload</a></li>
+                    <li>
+                        <a href="../../products/upload/productUpload.php" <?php
+
+                            if ($_SESSION['loggedIn'] != TRUE || $_SESSION['accessLevel'] <= 1) {
+                                echo 'class="hideMe"';
+                            }
+
+                        ?>>Product Upload</a>
+                    </li>
                     <li><a href="../../register/register.php">Register</a></li>
                     <li><a href="../../general/contact.php">Contact Us</a></li>
                     <li><a href="../../login/login.php">Log In</a></li>

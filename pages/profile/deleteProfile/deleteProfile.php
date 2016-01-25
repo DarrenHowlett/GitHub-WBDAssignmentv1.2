@@ -108,9 +108,6 @@
 					<a href="../../products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="../../products/upload/productUpload.php">Product Upload</a>
-				</li>
-				<li>
 					<a href="../../register/register.php">Register</a>
 				</li>
 				<li>
@@ -124,6 +121,15 @@
 				</li>
 				<li>
 					<a href="../../login/logout.php">Log Out</a>
+				</li>
+				<li>
+					<a href="../../products/upload/productUpload.php" <?php
+
+						if ($_SESSION['loggedIn'] != TRUE || $_SESSION['accessLevel'] <= 1) {
+							echo 'class="hideMe"';
+						}
+
+					?>>Product Upload</a>
 				</li>
 			</ul>
 		</div>
@@ -178,7 +184,15 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="../../products/upload/productUpload.php">Product Upload</a></li>
+					<li>
+						<a href="../../products/upload/productUpload.php" <?php
+
+							if ($_SESSION['loggedIn'] != TRUE || $_SESSION['accessLevel'] <= 1) {
+								echo 'class="hideMe"';
+							}
+
+						?>>Product Upload</a>
+					</li>
 					<li><a href="../../register/register.php">Register</a></li>
 					<li><a href="../../general/contact.php">Contact Us</a></li>
 					<li><a href="../../login/login.php">Log In</a></li>

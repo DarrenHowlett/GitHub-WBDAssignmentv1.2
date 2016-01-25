@@ -85,9 +85,6 @@ if ($_SESSION['loggedIn'] != TRUE) {
                         <a href="productGallery.php">Products</a>
                     </li>
                     <li>
-                        <a href="../../products/upload/productUpload.php">Product Upload</a>
-                    </li>
-                    <li>
                         <a href="../../register/register.php">Register</a>
                     </li>
                     <li>
@@ -101,6 +98,15 @@ if ($_SESSION['loggedIn'] != TRUE) {
                     </li>
                     <li>
                         <a href="../../login/logout.php">Log Out</a>
+                    </li>
+                    <li>
+                        <a href="../../products/upload/productUpload.php" <?php
+
+                            if ($_SESSION['loggedIn'] != TRUE || $_SESSION['accessLevel'] <= 1) {
+                                echo 'class="hideMe"';
+                            }
+
+                        ?>>Product Upload</a>
                     </li>
                 </ul>
             </div>
@@ -118,6 +124,7 @@ if ($_SESSION['loggedIn'] != TRUE) {
             <h1>Our Products</h1>
             <p>This is where you will find all of our products that we have for sale.  If you cannot find what you are looking for, or know what it is you want, you can always use the search below to narrow your search to see if we have an item suitable to you.</p>
             <form action="productGallery.php" method="post">
+                <h3>Product Category Search</h3>
                 <label for="productSearch">
                     <select id="productSearch" name="productSearch">
                         <option value="White Goods">White Goods</option>
@@ -150,53 +157,49 @@ if ($_SESSION['loggedIn'] != TRUE) {
         <div class="row text-center">
             <?php
 
-            $selectProduct = "SELECT * FROM `product`, `productPhoto` WHERE product.productID = productPhoto.productID AND productPhoto.productPhotoMaster = 1";
-            $selectProductResult = $conn -> query($selectProduct) or die($conn.__LINE__);
-
-            if (isset($_POST['productSearchSubmit'])) {
-
-                // Store the selection from product search in a variable
-                $productSearchSelection = $_POST['productSearch'];
-
-                // Because the product search will be compared to the tags stored in the database
-                // against each product, the selection made needs to have the % symbol added
-                // to the beginning and end of the selection, these are called "wildcards".
-                // By having these wildcards, when the search is performed on the database
-                // everything before & after the selection will be ignored and only the selection
-                // will be used.
-                $productSearchSelection = "%".$productSearchSelection."%";
-
-                $selectProduct = "SELECT * FROM `product`, `productPhoto` WHERE product.productID = productPhoto.productID AND productPhoto.productPhotoMaster = 1 AND `tags` LIKE  '".$productSearchSelection."'";
-
+                //  Select All Products for display before being filtered
+                $selectProduct = "SELECT * FROM `product`, `productPhoto` WHERE product.productID = productPhoto.productID AND productPhoto.productPhotoMaster = 1";
                 $selectProductResult = $conn -> query($selectProduct) or die($conn.__LINE__);
 
-            }
+                if (isset($_POST['productSearchSubmit'])) {
 
-            while ($selectProductRow = $selectProductResult -> fetch_assoc()) {
-                $productID = $selectProductRow['productID'];
-                $_SESSION['getProductID'] = $productID;
+                    // Store the selection from product search in a variable
+                    $productSearchSelection = $_POST['productSearch'];
 
-                echo "SESSION['getPoductID']:".$_SESSION['getProductID']."<br>";
-                echo "productID: ".$productID;
-                ?>
-            <form action="productView.php?id=<?php echo $selectProductRow['productID']; ?>" method="post">
-                <div class="col-md-3 col-sm-6 hero-feature">
-                    <div class="thumbnail">
-                        <img src="<?php echo $selectProductRow['fileLocation']; ?>" alt="<?php echo $selectProductRow['productPhotoName']; ?>">
-                        <div class="caption">
-                            <h3><?php echo $selectProductRow['productMake']." ".$selectProductRow['productModel']; ?></h3>
-                            <p>£<?php echo $selectProductRow['productPrice']; ?></p>
-                            <p><?php echo $selectProductRow['productShortDescription']; ?></p>
-                            <input id="productView" name="productView" type="submit" value="Product Information">
+                    // Because the product search will be compared to the tags stored in the database
+                    // against each product, the selection made needs to have the % symbol added
+                    // to the beginning and end of the selection, these are called "wildcards".
+                    // By having these wildcards, when the search is performed on the database
+                    // everything before & after the selection will be ignored and only the selection
+                    // will be used.
+                    $productSearchSelection = "%".$productSearchSelection."%";
 
+                    $selectProduct = "SELECT * FROM `product`, `productPhoto` WHERE product.productID = productPhoto.productID AND productPhoto.productPhotoMaster = 1 AND `tags` LIKE  '".$productSearchSelection."'";
+
+                    $selectProductResult = $conn -> query($selectProduct) or die($conn.__LINE__);
+
+
+
+                }
+
+                while ($selectProductRow = $selectProductResult -> fetch_assoc()) {
+
+                    ?>
+                        <div class="col-md-3 col-sm-6 hero-feature">
+                            <div class="thumbnail">
+                                <img src="<?php echo $selectProductRow['fileLocation']; ?>" alt="<?php echo $selectProductRow['productPhotoName']; ?>">
+                                <div class="caption">
+                                    <h3><?php echo $selectProductRow['productMake']." ".$selectProductRow['productModel']; ?></h3>
+                                    <p>£<?php echo $selectProductRow['productPrice']; ?></p>
+                                    <p><?php echo $selectProductRow['productShortDescription']; ?></p>
+                                    <a class="submitButton" href="productView.php?id=<?php echo $selectProductRow['productID']; ?>">View Product Information</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </form>
 
-                <?php
+                    <?php
 
-            } // /. while ()
+                } // /. while ()
 
             ?>
 
@@ -252,7 +255,15 @@ if ($_SESSION['loggedIn'] != TRUE) {
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="../../products/upload/productUpload.php">Product Upload</a></li>
+                            <li>
+                                <a href="../../products/upload/productUpload.php" <?php
+
+                                    if ($_SESSION['loggedIn'] != TRUE || $_SESSION['accessLevel'] <= 1) {
+                                        echo 'class="hideMe"';
+                                    }
+
+                                ?>>Product Upload</a>
+                            </li>
                             <li><a href="../../register/register.php">Register</a></li>
                             <li><a href="../../general/contact.php">Contact Us</a></li>
                             <li><a href="../../login/login.php">Log In</a></li>

@@ -1,3 +1,10 @@
+<?php
+
+	// Sessions/Cookies
+	session_start();
+	// /. Sessions/Cookies
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,9 +61,6 @@
 					<a href="pages/products/gallery/productGallery.php">Products</a>
 				</li>
 				<li>
-					<a href="pages/products/upload/productUpload.php">Product Upload</a>
-				</li>
-				<li>
 					<a href="pages/register/register.php">Register</a>
 				</li>
 				<li>
@@ -70,6 +74,15 @@
 				</li>
 				<li>
 					<a href="pages/login/logout.php">Log Out</a>
+				</li>
+				<li>
+					<a href="pages/products/upload/productUpload.php" <?php
+
+						if ($_SESSION['loggedIn'] != TRUE || $_SESSION['accessLevel'] <= 1) {
+							echo 'class="hideMe"';
+						}
+
+					?>>Product Upload</a>
 				</li>
 			</ul>
 		</div>
@@ -219,7 +232,15 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="pages/products/upload/productUpload.php">Product Upload</a></li>
+					<li>
+						<a href="pages/products/upload/productUpload.php" <?php
+
+							if ($_SESSION['loggedIn'] != TRUE || $_SESSION['accessLevel'] <= 1) {
+								echo 'class="hideMe"';
+							}
+
+						?>>Product Upload</a>
+					</li>
 					<li><a href="pages/register/register.php">Register</a></li>
 					<li><a href="pages/general/contact.php">Contact Us</a></li>
 					<li><a href="pages/login/login.php">Log In</a></li>

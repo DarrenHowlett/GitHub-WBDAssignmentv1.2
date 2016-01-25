@@ -97,10 +97,6 @@
 								<td>Email</td>
 								<td class="profileTD"><?php echo $_SESSION['email']; ?></td>
 							</tr>
-							<tr>
-								<td>Access Level</td>
-								<td class="profileTD"><?php echo $_SESSION['accessLevel']; ?></td>
-							</tr>
 							</tbody>
 						</table>
 						<br>
@@ -114,6 +110,7 @@
 					<!-- col-lg-12 -->
 					<div class="col-lg-12">
 						<p class="lead">Profile Options</p>
+						<p>If you need to update any of the details we have on file, or you wish to delete your profile, please use one of the four options below.</p>
 						<form action="updateProfile/updateProfile.php" method="post">
 							<input id="profileUpdate" name="profileUpdate" type="submit" value="Update Profile">
 						</form><br>

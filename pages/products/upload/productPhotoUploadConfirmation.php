@@ -46,7 +46,7 @@
 		 * Variables From File Information
 		-------------------------------------------- */
 
-			$productID 			= $_SESSION['productID'];
+			$productID 			= $_SESSION['newProductID'];
 			$fileName 			= $_FILES['userfile']['name'];
 			$tmpName 			= $_FILES['userfile']['tmp_name'];
 			$fileSize 			= $_FILES['userfile']['size'];

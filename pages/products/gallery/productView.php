@@ -115,9 +115,12 @@
 
 <?php
 
-    if (isset($_POST['viewProduct'])) {
+    if (isset($_POST['productView'])) {
 
-        $productID = $_SESSION['productID'];
+        $getProductID = $_SESSION['getProductID'];
+
+        echo "ProductID: ".$productID."<br>";
+        echo "SessionID: ".$_SESSION['getProductID'];
 
         $selectProduct = "SELECT * FROM `product`, `productPhoto` WHERE product.productID = '".$productID."' AND product.productID = productPhoto.productID AND productPhoto.productPhotoMaster = 1";
         $selectProductResult = $conn -> query($selectProduct) or die($conn.__LINE__);
@@ -127,7 +130,7 @@
             <!-- Portfolio Item Heading -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header"><?php echo $selectProductRow['productName']; ?>
+                    <h1 class="page-header"><?php echo $selectProductRow['productMake']." ".$selectProductRow['productModel']." ".$selectProductRow['productName']; ?>
                         <small>Categories: <?php echo $selectProductRow['tags']; ?></small>
                     </h1>
                 </div>
@@ -158,8 +161,17 @@
                             }
 
                         ?></p>
+                    <h3>Product Options</h3>
                     <form action="../buy/buyProduct.php" method="post">
                         <input id="buyProduct" name="buyProduct" type="submit" value="Buy Product">
+                    </form>
+                    <br>
+                    <form action="../update/updateProduct.php" method="post">
+                        <input id="updateProduct" name="updateProduct" type="submit" value="Update Product">
+                    </form>
+                    <br>
+                    <form action="../delete/deleteProduct.php" method="post">
+                        <input id="deleteProduct" name="deleteProduct" type="submit" value="Delete Product">
                     </form>
                 </div>
 

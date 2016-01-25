@@ -7,7 +7,7 @@
  ---------------------------------------- */
 
 .required {
-    color: red;
+    color: red; /* Red */
 }
 
 /* -----------------------------------------
@@ -28,7 +28,7 @@
 
     .profileTH,
     .profileTD {
-         padding-left: 2em;
+         padding-left: 2em; /* An item with this class will have some padding added to the left to give it some spacing. */
      }
 
     /* -----------------------------------------
@@ -36,11 +36,11 @@
      ---------------------------------------- */
 
     table.order {
-        width: 100%;
+        width: 100%; /* This means a table will take up 100% of the width of the element the table is in */
     }
 
     table.order .amount {
-        text-align: right;
+        text-align: right; /* Any text within an element with this class will have its text align to the right. */
     }
 
 /* -----------------------------------------
